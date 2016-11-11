@@ -1,3 +1,4 @@
+// helper, let's drag windows
 if (!mouse_check_button_pressed(mb_left)) {
     exit;
 }

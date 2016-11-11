@@ -93,16 +93,18 @@
     </scripts>
     <scripts name="Drag And Drop">
       <script>scripts\scr_dNd_getDist.gml</script>
-      <script>scripts\scr_dragNdrop.gml</script>
-      <script>scripts\scr_dragNdrop_ext.gml</script>
       <script>scripts\scr_dNd_drag.gml</script>
       <script>scripts\scr_dNd_getManager.gml</script>
       <script>scripts\scr_dNd_snap.gml</script>
       <script>scripts\scr_dNd_snapBack.gml</script>
       <script>scripts\scr_dNd_snapTo.gml</script>
       <script>scripts\scr_dNd_drop.gml</script>
-      <script>scripts\scr_dragNdrop_init.gml</script>
-      <script>scripts\scr_dragNdrop_start.gml</script>
+      <scripts name="public">
+        <script>scripts\scr_dragNdrop_init.gml</script>
+        <script>scripts\scr_dragNdrop_start.gml</script>
+        <script>scripts\scr_dragNdrop.gml</script>
+        <script>scripts\scr_dragNdrop_ext.gml</script>
+      </scripts>
     </scripts>
     <scripts name="Console">
       <script>scripts\console_execute.gml</script>
@@ -118,12 +120,14 @@
       </scripts>
     </scripts>
     <scripts name="windows">
-      <script>scripts\window_init.gml</script>
-      <script>scripts\window_draw.gml</script>
-      <script>scripts\window_step.gml</script>
       <script>scripts\window_close_button.gml</script>
       <script>scripts\window_drag.gml</script>
       <script>scripts\window_draw_bar.gml</script>
+      <scripts name="public">
+        <script>scripts\window_init.gml</script>
+        <script>scripts\window_step.gml</script>
+        <script>scripts\window_draw.gml</script>
+      </scripts>
     </scripts>
   </scripts>
   <fonts name="fonts">

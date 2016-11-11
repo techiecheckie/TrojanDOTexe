@@ -1,4 +1,4 @@
-// helper script for drag and drop objects
+// scr_dragNdrop_init
 // call in create to make sure all variables are initialized
 
 is_dragNdrop = 0;
