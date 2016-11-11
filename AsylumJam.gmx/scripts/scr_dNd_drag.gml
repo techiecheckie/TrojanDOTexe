@@ -105,6 +105,7 @@ var pos_x, pos_y, pos_z;
 pos_z = dragDepth;  //set pos_z (Z index) to the provided dragDepth var
 
 //then set the position of objToDrag based on its origin coords
+/*
 if (obj_Center_X > 5 && obj_Center_Y > 5)
 {
     //this places the mouse at objToDrag's origin
@@ -118,7 +119,9 @@ else
         pos_y = (mouse_y - (obj_height / 2));
     }
 
-
+*/
+pos_x = mouse_x - dragOffsetX;
+pos_y = mouse_y - dragOffsetY;
 
 //move objToDrag to the new position
 objToDrag.x = pos_x;

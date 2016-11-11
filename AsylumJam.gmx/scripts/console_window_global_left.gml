@@ -10,7 +10,7 @@ if (point_in_rectangle(mouse_x, mouse_y, x, y, x + windowWidth, y + windowHeight
         //check if the dragNdrop script is already running
         if (self.is_dragNdrop = 0)
         {
-            scr_dragNdrop(self, -10000);     //run the dragNdrop script
+            scr_dragNdrop_start(self, -10000);     //run the dragNdrop script
                                             //  -- scr_dragNdrop(objToMove, dragDepth)
         }
     }

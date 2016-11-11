@@ -100,6 +100,8 @@
       <script>scripts\scr_dNd_snapBack.gml</script>
       <script>scripts\scr_dNd_snapTo.gml</script>
       <script>scripts\scr_dNd_drop.gml</script>
+      <script>scripts\scr_dragNdrop_init.gml</script>
+      <script>scripts\scr_dragNdrop_start.gml</script>
     </scripts>
     <scripts name="Console">
       <script>scripts\console_execute.gml</script>
@@ -150,8 +152,8 @@
     <object>objects\obj_TextBlock</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room_example</room>
     <room>rooms\rm_Demo_dragNdrop</room>
+    <room>rooms\room_example</room>
     <room>rooms\room0</room>
   </rooms>
   <help>
