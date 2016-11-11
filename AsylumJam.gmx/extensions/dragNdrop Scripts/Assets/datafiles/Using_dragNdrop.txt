@@ -1,0 +1,86 @@
+-----------------------------------------------------------------------------------------------------------------------------------
+For the most part you can use these 2 scripts for drag-and-drop functionality:
+	-	scr_dragNdrop(objToMove, dragDepth)
+	-	scr_dragNdrop_ext(objToMove, dragDepth, mouseDragIcon, snap_obj, snap_x, snap_y, maxDistX, maxDistY)
+
+However there may come a time when you need/want something different; so 7 individual functions were created to allow for easier
+modifications to give you more control over how objects are dragged/dropped.
+(Read "ModExpand_dragNdrop.txt" for more info)
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+Setting up a PROJECT to be compatible with dragNdrop scripts:
+
+	1. The object "obj_dragNdrop_Mngr" must be included in the resource tree of a project.
+			--	obj_dragNdrop_Mngr can be found in the folder "dragNdrop Manager" under objects
+				in the resource tree
+			--	All rooms must contain ONE (and only 1) instance of "obj_dragNdrop_Mngr"
+            If one does not exist, then an instance of "obj_dragNdrop_Mngr" will automatically be created
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+Setting up an OBJECT to be compatible with dragNdrop scripts:
+
+	1. [creation event] Add the following 4 variables to your object:
+			--	is_dragNdrop = 0;    //any object that uses the scr_dragNdrop script(s) MUST have the vars "is_dragNdrop" AND "id_dragNdrop"
+			--	id_dragNdrop = -1;   //must set id_dragNdrop to -1 to avoid dragNdrop object id clashes (as in 2 instances having the same id_dragNdrop value)
+         
+         --	isSingleDrop = 0;    //set this to 1 here if the object should only be allowed to drag and drop once
+			--	isLocked = 0;        //this variable will automatically be changed to 1 (locked) after the object has been moved
+                                 //if the isSingleDrop var is set to 1
+         
+         
+         //if you plan on using the script scr_dragNdrop_ext(), you will also need to add the following 5 variables to your
+         //object here in the creation event:
+         
+         -- SnapObject = Obj_Name;     //SnapObject is used to hold the name of a specific object to snap to
+         
+         -- cursorToUse = spr_Cursor;  //"cursorToUse" is a var that holds a sprite to use as a cursor while dragging an object
+                                       //set to -1 to NOT use a custom cursor)
+         
+         -- drop_MaxDistX = 40;        //"drop_MaxDistX" is used to set the max distance (in pixels) on the x-axis allowed between
+                                       //the dragged object and the object to snap to
+         -- drop_MaxDistY = 40;        //"drop_MaxDistY" is used to set the max distance (in pixels) on the y-axis allowed between
+                                       //the dragged object and the object to snap to
+         
+         -- drag_Depth = 10000;        //drag_Depth is used to give the object being dragged a specific depth while being dragged
+                                       //(original depth will be restored when the object is dropped)
+	
+   
+   
+	2. [step event] Add the following code:
+			--	//check if the dragNdrop script is already running
+				if (self.is_dragNdrop = 1)
+				{
+					//run the scr_dragNdrop script
+					scr_dragNdrop(objToMove, dragDepth);
+													
+					//OR...........
+					
+					//run the scr_dragNdrop_ext script
+					scr_dragNdrop_ext(objToMove, dragDepth, mouseDragIcon, snap_obj, snap_x, snap_y, maxDistX, maxDistY);
+				}
+	
+   
+   
+	//step 3 code can be added to whatever your trigger is for using drag-and-drop (in this case, the left mouse button press event)
+	3. [left press event] Add the following code:
+			--	//check if the object has been locked or not
+            if(self.isLocked = 0)
+            {
+               //check if the dragNdrop script is already running
+               if (self.is_dragNdrop = 0)
+               {
+                  //run the scr_dragNdrop script
+                  scr_dragNdrop(objToMove, dragDepth);     
+                                          
+                  //OR...........
+                  
+                  //run the scr_dragNdrop_ext script
+                  scr_dragNdrop_ext(objToMove, dragDepth, mouseDragIcon, snap_obj, snap_x, snap_y, maxDistX, maxDistY);
+               }
+            }

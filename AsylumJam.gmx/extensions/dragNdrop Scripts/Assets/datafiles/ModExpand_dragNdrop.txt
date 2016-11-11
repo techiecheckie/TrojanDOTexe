@@ -1,0 +1,27 @@
+-----------------------------------------------------------------------------------------------------------------------------------
+
+IF YOU NEED TO MODIFY THE CODE FOR ANY REASON, PLEASE BE SURE TO MAKE BACKUP COPIES OF THE ORIGINAL CODE FIRST.
+
+Also, take some time to read the comments and code for ALL dragNdrop scripts. The code has been created with
+maintainability in mind, so it should be simple to modify or create new scripts using the existing scripts.
+I recommend that you DO NOT attempt to modify any of these scripts until you clearly understand how they use
+each other to move objects.
+
+With that said, the scripts "scr_dragNdrop" and "scr_dragNdrop_ext" will be great references when creating or
+expanding drag-and-drop capabilities for your project. All scripts named "scr_dNd_*" are helper scripts that
+perform a specific task (relevant to their own name).
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+There are 9 scripts in total (for now) that call each other, so take care when/if modifying them:
+-	scr_dragNdrop
+-	scr_dragNdrop_ext
+-	scr_dNd_drag
+-	scr_dNd_drop
+-	scr_dNd_getDist
+-	scr_dNd_getManager
+-	scr_dNd_snap
+-	scr_dNd_snapBack
+-	scr_dNd_snapTo
