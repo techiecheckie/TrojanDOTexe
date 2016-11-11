@@ -81,6 +81,13 @@
       <sprite>sprites\spr_window_bar</sprite>
       <sprite>sprites\spr_window_x_button</sprite>
     </sprites>
+    <sprites name="glitch">
+      <sprite>sprites\spr_glitch1</sprite>
+      <sprite>sprites\spr_glitch2</sprite>
+      <sprite>sprites\spr_glitch3</sprite>
+      <sprite>sprites\spr_glitch4</sprite>
+      <sprite>sprites\spr_noise</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bGround</background>
@@ -129,7 +136,25 @@
         <script>scripts\window_draw.gml</script>
       </scripts>
     </scripts>
+    <scripts name="glitch">
+      <script>scripts\glitch_init.gml</script>
+      <script>scripts\glitch_draw_gui.gml</script>
+      <scripts name="offset">
+        <script>scripts\offset_glitch_init.gml</script>
+        <script>scripts\offset_glitch_update.gml</script>
+        <script>scripts\offset_glitch_draw.gml</script>
+      </scripts>
+      <scripts name="noise">
+        <script>scripts\show_noise.gml</script>
+      </scripts>
+      <script>scripts\glitch_test_step.gml</script>
+    </scripts>
   </scripts>
+  <shaders name="shaders">
+    <shader type="GLSLES">shaders\shd_glitch_combine.shader</shader>
+    <shader type="GLSLES">shaders\shd_offset_glitch.shader</shader>
+    <shader type="GLSLES">shaders\shd_noise.shader</shader>
+  </shaders>
   <fonts name="fonts">
     <font>fonts\fntDialogue</font>
     <font>fonts\fntInfo</font>
@@ -160,8 +185,17 @@
     <object>objects\obj_Block2</object>
     <object>objects\obj_SnapBlock</object>
     <object>objects\obj_TextBlock</object>
+    <objects name="Glitch">
+      <object>objects\obj_glitch</object>
+      <object>objects\obj_glitch_demo</object>
+    </objects>
+    <objects name="parents">
+      <object>objects\obj_particle</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_demo_glitch</room>
+    <room>rooms\rm_Glitch</room>
     <room>rooms\room_example</room>
     <room>rooms\rm_Demo_dragNdrop</room>
     <room>rooms\room0</room>
