@@ -9,4 +9,4 @@ var_iResolution_x = view_wview[0];
 var_iResolution_y = view_hview[0];
 
 offset_glitch_timer = 0;
-offset_glitch_timer_max = 5;
+offset_glitch_timer_max = 2;

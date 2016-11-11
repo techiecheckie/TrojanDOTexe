@@ -146,6 +146,8 @@
       </scripts>
       <scripts name="noise">
         <script>scripts\show_noise.gml</script>
+        <script>scripts\noise_draw.gml</script>
+        <script>scripts\noise_init.gml</script>
       </scripts>
       <script>scripts\glitch_test_step.gml</script>
     </scripts>
