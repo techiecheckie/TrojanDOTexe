@@ -79,6 +79,7 @@
     <sprite>sprites\spr_Btn_Exit</sprite>
     <sprites name="ui">
       <sprite>sprites\spr_window_bar</sprite>
+      <sprite>sprites\spr_window_x_button</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -113,11 +114,16 @@
         <script>scripts\console_window_init.gml</script>
         <script>scripts\console_window_draw.gml</script>
         <script>scripts\console_window_step.gml</script>
-        <script>scripts\console_window_global_left.gml</script>
+        <script>scripts\console_window_event_0.gml</script>
       </scripts>
     </scripts>
     <scripts name="windows">
-      <script>scripts\draw_window_bar.gml</script>
+      <script>scripts\window_init.gml</script>
+      <script>scripts\window_draw.gml</script>
+      <script>scripts\window_step.gml</script>
+      <script>scripts\window_close_button.gml</script>
+      <script>scripts\window_drag.gml</script>
+      <script>scripts\window_draw_bar.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -152,8 +158,8 @@
     <object>objects\obj_TextBlock</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_Demo_dragNdrop</room>
     <room>rooms\room_example</room>
+    <room>rooms\rm_Demo_dragNdrop</room>
     <room>rooms\room0</room>
   </rooms>
   <help>

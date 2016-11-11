@@ -65,7 +65,6 @@
             __ctickerafter = '';
         } else {
             // we have to put the global mouse event here so it doesn't get eaten by io_clear
-            console_window_global_left();
             io_clear(); // prevents all other keyboard events in all other objects
             //(except keyboard_check_direct)
             keyboard_clear(keyboard_lastkey);

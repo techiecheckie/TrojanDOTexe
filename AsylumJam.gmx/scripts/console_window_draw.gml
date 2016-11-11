@@ -30,6 +30,6 @@ var yy = y+windowHeight;
         draw_text(xx+5, yy+__ch - __clh, '>' + keyboard_string+ __ctickerafter);
         
         // draw the window bar
-        draw_window_bar(xx, yy, windowWidth);
+        window_draw(xx, yy);
         
     }
