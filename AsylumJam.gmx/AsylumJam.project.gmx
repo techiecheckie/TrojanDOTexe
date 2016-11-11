@@ -197,7 +197,6 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_demo_glitch</room>
-    <room>rooms\rm_Glitch</room>
     <room>rooms\room_example</room>
     <room>rooms\rm_Demo_dragNdrop</room>
     <room>rooms\room0</room>
