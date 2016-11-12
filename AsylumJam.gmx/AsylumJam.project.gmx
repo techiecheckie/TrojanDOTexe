@@ -113,29 +113,6 @@
         <script>scripts\scr_dragNdrop_ext.gml</script>
       </scripts>
     </scripts>
-    <scripts name="Console">
-      <script>scripts\console_execute.gml</script>
-      <script>scripts\console_draw.gml</script>
-      <script>scripts\console_init.gml</script>
-      <script>scripts\console_step.gml</script>
-      <script>scripts\console_log.gml</script>
-      <scripts name="console_window_obj">
-        <script>scripts\console_window_init.gml</script>
-        <script>scripts\console_window_draw.gml</script>
-        <script>scripts\console_window_step.gml</script>
-        <script>scripts\console_window_event_0.gml</script>
-      </scripts>
-    </scripts>
-    <scripts name="windows">
-      <script>scripts\window_close_button.gml</script>
-      <script>scripts\window_drag.gml</script>
-      <script>scripts\window_draw_bar.gml</script>
-      <scripts name="public">
-        <script>scripts\window_init.gml</script>
-        <script>scripts\window_step.gml</script>
-        <script>scripts\window_draw.gml</script>
-      </scripts>
-    </scripts>
     <scripts name="glitch">
       <script>scripts\glitch_init.gml</script>
       <script>scripts\glitch_draw_gui.gml</script>
@@ -150,6 +127,38 @@
         <script>scripts\noise_init.gml</script>
       </scripts>
       <script>scripts\glitch_test_step.gml</script>
+    </scripts>
+    <scripts name="ui">
+      <scripts name="windows">
+        <script>scripts\window_close_button.gml</script>
+        <script>scripts\window_drag.gml</script>
+        <script>scripts\window_draw_bar.gml</script>
+        <scripts name="public">
+          <script>scripts\window_init.gml</script>
+          <script>scripts\window_step.gml</script>
+          <script>scripts\window_draw.gml</script>
+        </scripts>
+      </scripts>
+      <scripts name="Console">
+        <script>scripts\console_execute.gml</script>
+        <script>scripts\console_draw.gml</script>
+        <script>scripts\console_init.gml</script>
+        <script>scripts\console_step.gml</script>
+        <script>scripts\console_log.gml</script>
+        <scripts name="console_window_obj">
+          <script>scripts\console_window_init.gml</script>
+          <script>scripts\console_window_draw.gml</script>
+          <script>scripts\console_window_step.gml</script>
+          <script>scripts\console_window_event_0.gml</script>
+        </scripts>
+      </scripts>
+      <scripts name="dialogbox">
+        <script>scripts\dialogbox_init.gml</script>
+        <script>scripts\dialogbox_draw.gml</script>
+        <script>scripts\dialogbox_add_button.gml</script>
+        <script>scripts\dialogbox_set_text.gml</script>
+        <script>scripts\dialogbox_step.gml</script>
+      </scripts>
     </scripts>
   </scripts>
   <shaders name="shaders">
@@ -178,10 +187,6 @@
     <objects name="dragNdrop Manager">
       <object>objects\obj_dragNdrop_Mngr</object>
     </objects>
-    <objects name="Console">
-      <object>objects\obj_console</object>
-      <object>objects\obj_console_window</object>
-    </objects>
     <object>objects\obj_Btn_Exit</object>
     <object>objects\obj_Block1</object>
     <object>objects\obj_Block2</object>
@@ -194,10 +199,19 @@
     <objects name="parents">
       <object>objects\obj_particle</object>
     </objects>
+    <objects name="ui">
+      <objects name="Console">
+        <object>objects\obj_console</object>
+        <object>objects\obj_console_window</object>
+      </objects>
+      <objects name="dialogbox">
+        <object>objects\obj_dialogbox</object>
+      </objects>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_demo_glitch</room>
     <room>rooms\room_example</room>
+    <room>rooms\rm_demo_glitch</room>
     <room>rooms\rm_Demo_dragNdrop</room>
     <room>rooms\room0</room>
   </rooms>

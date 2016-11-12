@@ -120,8 +120,8 @@ else
     }
 
 */
-pos_x = mouse_x - dragOffsetX;
-pos_y = mouse_y - dragOffsetY;
+pos_x = clamp(0, mouse_x - dragOffsetX, view_wview[0]-64);
+pos_y = clamp(0, mouse_y - dragOffsetY, view_hview[0]-64);
 
 //move objToDrag to the new position
 objToDrag.x = pos_x;
