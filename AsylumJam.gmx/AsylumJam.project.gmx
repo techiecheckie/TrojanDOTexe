@@ -91,6 +91,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\bGround</background>
+    <background>background\test</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -127,6 +128,12 @@
         <script>scripts\noise_init.gml</script>
       </scripts>
       <script>scripts\glitch_test_step.gml</script>
+      <scripts name="crash">
+        <script>scripts\crash_glitch_init.gml</script>
+        <script>scripts\crash_glitch_draw.gml</script>
+        <script>scripts\crash_glitch_start.gml</script>
+        <script>scripts\crash_small_warp.gml</script>
+      </scripts>
     </scripts>
     <scripts name="ui">
       <scripts name="windows">
@@ -165,6 +172,7 @@
     <shader type="GLSLES">shaders\shd_glitch_combine.shader</shader>
     <shader type="GLSLES">shaders\shd_offset_glitch.shader</shader>
     <shader type="GLSLES">shaders\shd_noise.shader</shader>
+    <shader type="GLSLES">shaders\shader3.shader</shader>
   </shaders>
   <fonts name="fonts">
     <font>fonts\fntDialogue</font>
@@ -210,8 +218,8 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room_example</room>
     <room>rooms\rm_demo_glitch</room>
+    <room>rooms\room_example</room>
     <room>rooms\rm_Demo_dragNdrop</room>
     <room>rooms\room0</room>
   </rooms>

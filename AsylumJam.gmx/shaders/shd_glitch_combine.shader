@@ -2,7 +2,7 @@
 // Simple passthrough vertex shader
 //
 attribute vec3 in_Position;                  // (x,y,z)
-//attribute vec3 in_Normal;                  // (x,y,z)     unused in this shader.	
+//attribute vec3 in_Normal;                  // (x,y,z)     unused in this shader.
 attribute vec4 in_Colour;                    // (r,g,b,a)
 attribute vec2 in_TextureCoord;              // (u,v)
 
@@ -18,9 +18,12 @@ void main()
     v_vTexcoord = in_TextureCoord;
 }
 
-//######################_==_YOYO_SHADER_MARKER_==_######################@~uniform sampler2D from, to;
+//######################_==_YOYO_SHADER_MARKER_==_######################@~uniform sampler2D to;
 uniform float progress;
-uniform vec2 resolution;
+
+varying vec2 v_vTexcoord;
+varying vec4 v_vColour;
+
 highp float random(vec2 co)
 {
     highp float a = 12.9898;
@@ -75,13 +78,13 @@ float ease2(float t) {
 
 
 void main() {
-  vec2 p = gl_FragCoord.xy / resolution.xy;
-  vec4 color1 = texture2D(from, p);
+  vec2 p = v_vTexcoord;
+  vec4 color1 = v_vColour * texture2D( gm_BaseTexture,  p);
   vec4 color2 = texture2D(to, p);
   vec2 disp = displace(color1, p, 0.33, 0.7, 1.0-ease1(progress));
   vec2 disp2 = displace(color2, p, 0.33, 0.5, ease2(progress));
   vec4 dColor1 = texture2D(to, disp);
-  vec4 dColor2 = texture2D(from, disp2);
+  vec4 dColor2 = texture2D(gm_BaseTexture, disp2);
   float val = ease1(progress);
   vec3 gray = vec3(dot(min(dColor2, dColor1).rgb, vec3(0.299, 0.587, 0.114)));
   dColor2 = vec4(gray, 1.0);
@@ -89,6 +92,7 @@ void main() {
   color1 = mix(color1, dColor2, smoothstep(0.0, 0.5, progress));
   color2 = mix(color2, dColor1, smoothstep(1.0, 0.5, progress));
   gl_FragColor = mix(color1, color2, val);
+  // gl_FragColor = vec4(vec3(val), 1);
   //gl_FragColor = mix(gl_FragColor, dColor, smoothstep(0.0, 0.5, progress));
   
    //gl_FragColor = mix(texture2D(from, p), texture2D(to, p), progress);

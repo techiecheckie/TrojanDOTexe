@@ -1,3 +1,4 @@
+// TODO: limit this to just when the mouse is over the scrollbar!
 if mouse_check_button(mb_left) {
     scrollPos = median(0, 1, (mouse_y - areaY) / areaHeight);
 }
