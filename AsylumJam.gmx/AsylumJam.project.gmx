@@ -161,7 +161,6 @@
         </scripts>
       </scripts>
       <scripts name="dialogbox">
-        <script>scripts\dialogbox_DOCUMENTATION.gml</script>
         <script>scripts\dialogbox_init.gml</script>
         <script>scripts\dialogbox_draw.gml</script>
         <script>scripts\dialogbox_destroy.gml</script>
@@ -178,20 +177,27 @@
         <script>scripts\filemanager_init.gml</script>
         <script>scripts\filemanager_draw.gml</script>
         <script>scripts\filemanager_update.gml</script>
-        <script>scripts\filemanager_DOCUMENTATION.gml</script>
       </scripts>
       <scripts name="shared">
         <script>scripts\draw_outlined_pane.gml</script>
       </scripts>
+      <scripts name="Documentation">
+        <script>scripts\filemanager_DOCUMENTATION.gml</script>
+        <script>scripts\dialogbox_DOCUMENTATION.gml</script>
+      </scripts>
     </scripts>
     <script>scripts\dialogue.gml</script>
+    <script>scripts\scr_startMenu.gml</script>
     <scripts name="utils">
       <script>scripts\draw_sprite_bar.gml</script>
     </scripts>
-    <script>scripts\scr_startMenu.gml</script>
     <scripts name="persistent">
       <script>scripts\persistent_step.gml</script>
       <script>scripts\persistent_init.gml</script>
+    </scripts>
+    <scripts name="Narrative Scripts">
+      <script>scripts\scr_downloadActiveX.gml</script>
+      <script>scripts\scr_noDownloadAX.gml</script>
     </scripts>
   </scripts>
   <shaders name="shaders">
@@ -259,6 +265,8 @@
       <object>objects\oDialogue</object>
     </objects>
     <object>objects\obj_control</object>
+    <object>objects\gameControl</object>
+    <object>objects\obj_timer</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start</room>
