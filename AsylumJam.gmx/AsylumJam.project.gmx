@@ -157,7 +157,7 @@
         <script>scripts\dialogbox_init.gml</script>
         <script>scripts\dialogbox_draw.gml</script>
         <script>scripts\dialogbox_set_text.gml</script>
-        <script>scripts\dialogbox_step.gml</script>
+        <script>scripts\dialogbox_scroll.gml</script>
         <scripts name="button">
           <script>scripts\dialogbox_add_button.gml</script>
           <script>scripts\dialogbox_draw_buttons.gml</script>

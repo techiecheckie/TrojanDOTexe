@@ -1,5 +1,3 @@
-dialogbox_step();
-
 var textboxColor = c_white;
 var backgroundColor = c_ltgray;
 var textColor = c_black;
@@ -32,15 +30,19 @@ draw_set_color(textColor);
 draw_rectangle(xx+(windowWidth/2 - areaWidth/2), yy+areaY,xx+(windowWidth/2 + areaWidth/2),yy+areaY+areaHeight,1);
 draw_rectangle(xx, yy, xx+windowWidth-1,yy+totalHeight,1);
 
-var areaRight = xx+(windowWidth/2 + areaWidth/2);
-var scrollbarHeight = areaHeight / textHeight;
+var scrollbarX = xx+(windowWidth/2 + areaWidth/2);
+var scrollbarY = yy + areaY;
+var scrollbarWidth = 8;
+var scrollbarHeight = (areaHeight / textHeight)*areaHeight;
 
 if (scrollScale > 0) {
+    
     // draw the scrollbar
-    draw_rectangle(areaRight, yy+areaY, areaRight+8, yy+areaY+areaHeight,0);
+    draw_set_color(textColor);
+    draw_rectangle(scrollbarX, yy+areaY, scrollbarX+scrollbarWidth, yy+areaY+areaHeight,0);
     draw_set_color(c_white);
-    draw_rectangle(areaRight+1, yy+areaY+scrollPos*(areaHeight*scrollbarHeight), areaRight+7, yy+areaY+(scrollPos*(scrollbarHeight*areaHeight))
-    +(scrollbarHeight*areaHeight), 0);
+    draw_rectangle(scrollbarX+1, scrollbarY+scrollPos*(areaHeight-scrollbarHeight), scrollbarX+scrollbarWidth-1, scrollbarY+scrollPos*(areaHeight-scrollbarHeight)+scrollbarHeight, 0);
+    dialogbox_scroll(xx, yy, scrollbarX, scrollbarWidth);
 }
 
 // draw buttons

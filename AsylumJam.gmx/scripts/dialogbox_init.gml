@@ -9,6 +9,8 @@ buttonHeight = sprite_get_height(spr_button);
 buttonsWidth = 0;
 padding = 8;
 
+scrolling = false;
+
 surf = -1;
 
 dialogbox_set_text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id faucibus ligula. Integer varius est ut nisi tincidunt posuere varius enim tempor. In in dui metus. Donec nec tellus nulla, a vestibulum mauris. Sed at tincidunt erat. Etiam ipsum sapien, bibendum eget viverra at, fermentum id arcu. Mauris non purus dapibus purus volutpat facilisis. Mauris quis mauris vel mauris gravida placerat. Morbi porta vulputate est venenatis euismod. Nam cursus, elit accumsan congue tempor, elit nisl imperdiet felis, nec bibendum elit nunc eget orci. Vivamus posuere, leo et consectetur pellentesque, metus velit sodales sem, nec tristique neque leo auctor nisl. Nam consectetur, neque non iaculis iaculis, nisl nunc blandit magna, quis condimentum enim ante non ante. Quisque imperdiet lacus ac mauris lobortis elementum. Sed non urna ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac arcu non justo auctor imperdiet. Curabitur iaculis dictum libero, in lobortis magna vehicula ut. Fusce nec arcu a turpis porta feugiat."

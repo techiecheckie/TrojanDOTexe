@@ -65,7 +65,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>dialogbox_set_text("Test short");
+            <string>// dialogbox_set_text("Test short");
 
 dialogbox_add_button("Testing", -1);
 dialogbox_add_button("Test2",-1);
