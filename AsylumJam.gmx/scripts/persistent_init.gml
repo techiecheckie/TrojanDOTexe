@@ -1,4 +1,6 @@
 
+// Disable doubleclicking
+global.dc_disabled = 1;
 
 global.yourFiles[0] = 'CORRUPT1';
 global.yourFiles[1] = 'CORRUPTASFUCK';

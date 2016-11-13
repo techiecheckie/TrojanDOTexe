@@ -269,6 +269,9 @@
     <object>objects\gameControl</object>
     <object>objects\obj_timer</object>
   </objects>
+  <timelines name="timelines">
+    <timeline>timelines\tl_virusIntro</timeline>
+  </timelines>
   <rooms name="rooms">
     <room>rooms\rm_start</room>
     <room>rooms\rm_splashPage</room>
