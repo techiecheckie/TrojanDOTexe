@@ -194,6 +194,7 @@
     <scripts name="persistent">
       <script>scripts\persistent_step.gml</script>
       <script>scripts\persistent_init.gml</script>
+      <script>scripts\persistent_room_start.gml</script>
     </scripts>
     <scripts name="Narrative Scripts">
       <script>scripts\scr_downloadActiveX.gml</script>

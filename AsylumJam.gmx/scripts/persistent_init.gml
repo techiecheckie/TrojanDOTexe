@@ -1,4 +1,4 @@
-display_set_gui_size(view_wview[0], view_hview[0]);
+
 
 global.yourFiles[0] = 'CORRUPT1';
 global.yourFiles[1] = 'CORRUPTASFUCK';
