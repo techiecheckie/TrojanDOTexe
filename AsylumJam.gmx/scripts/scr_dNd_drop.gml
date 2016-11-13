@@ -25,6 +25,10 @@
 var objToDrop;
 objToDrop = argument0;  //the object to drop
 
+if (!instance_exists(objToDrop)) {
+    exit;
+}
+
 //.............................................................
 
 

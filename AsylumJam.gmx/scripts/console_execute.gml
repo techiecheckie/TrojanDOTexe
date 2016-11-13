@@ -83,14 +83,14 @@
             else if (filepath == "Dekstop\RecycleBin") {
                 if (args[1] == '') {
                     var st = ".   ..   ";
-                    for (var i = 0; i < totalFiles; i++) {
-                        if ((i > 0) && (i % 2) && !(i == totalFiles-1) && !(recycleBin[i] == "")) {
-                            st += recycleBin[i] + "#";
+                    for (var i = 0; i < global.recycleBinSize; i++) {
+                        if ((i > 0) && (i % 2) && !(i ==  global.recycleBinSize-1) && !(global.recycleBin[i] == "")) {
+                            st += global.recycleBin[i] + "#";
                             console_log(st, c_white);
                             st = "";
                         }
-                        else if !(recycleBin[i] == ""){
-                            st += recycleBin[i] + "   ";
+                        else if !(global.recycleBin[i] == ""){
+                            st += global.recycleBin[i] + "     ";
                         }
                     }
                     console_log(st, c_white);
@@ -102,9 +102,23 @@
             
             else if (filepath == "Dekstop\YourFiles") {
                 if args[1] == '' {
-                    console_log(".   ..   CORRUPT1   CORRUPTASFUCK   ", c_white);
-                    console_log("GOT_THIS_ONE_TOO   ALREADY-TR0J4Ns", c_white);
-                    console_log("TOO-BAD-SOOOOO-SAD   LATEBIRD.LATEBIRD  ", c_white);
+                    var str = "";
+                    for (var i = 0; i < global.yourFilesSize;i++) {
+                        if (i == 0) {
+                            str += ".   ..   ";
+                        }
+                        str += global.yourFiles[i] + "   ";
+                        if (i % 2 != 0 && i != 0) {
+                            console_log(str, c_white);
+                            str = "";
+                        }
+                    }
+                    if (global.yourFilesSize % 2 != 0) {
+                        console_log(str, c_white);
+                    }
+                    // console_log(".   ..   CORRUPT1   CORRUPTASFUCK   ", c_white);
+                    // console_log("GOT_THIS_ONE_TOO   ALREADY-TR0J4Ns", c_white);
+                    // console_log("TOO-BAD-SOOOOO-SAD   LATEBIRD.LATEBIRD  ", c_white);
                 } else {
                     console_log("dir command cannot take args: " + args[1], c_red);
                     console_log("noT AMUSED", c_purple);

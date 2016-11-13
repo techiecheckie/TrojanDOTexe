@@ -22,13 +22,4 @@
     __chisp = 0; // current history pointer
     
     console_log("(C) M1cr050ft W1nd0w5. A11 R1ght5 Ar3 Tr0j4n's.", c_green);
-    recycleBin[0] = "file001.bin   ";
-    recycleBin[1] = "file002.bin   ";
-    recycleBin[2] = "file003.bin   ";
-    recycleBin[3] = "file004.bin   ";
-    recycleBin[4] = "file005.bin   ";
-    recycleBin[5] = "file006.bin   ";
-    recycleBin[6] = "tr00tr0j.temp   ";
-    recycleBin[7] = "inUrBase.temp   ";
-    recycleBin[8] = "eetingUrD00dz.temp   ";
-    totalFiles = 9;
+    

@@ -74,6 +74,8 @@
       <sprite>sprites\spr_cmd</sprite>
       <sprite>sprites\spr_button</sprite>
       <sprite>sprites\spr_button_hover</sprite>
+      <sprite>sprites\spr_file</sprite>
+      <sprite>sprites\spr_folder</sprite>
     </sprites>
     <sprites name="glitch">
       <sprite>sprites\spr_glitch1</sprite>
@@ -171,6 +173,13 @@
           <script>scripts\dialogbox_add_button.gml</script>
         </scripts>
       </scripts>
+      <scripts name="filemanager">
+        <script>scripts\filemanager_init.gml</script>
+        <script>scripts\filemanager_draw.gml</script>
+      </scripts>
+      <scripts name="shared">
+        <script>scripts\draw_outlined_pane.gml</script>
+      </scripts>
     </scripts>
     <script>scripts\dialogue.gml</script>
     <scripts name="utils">
@@ -227,6 +236,13 @@
       </objects>
       <objects name="icons">
         <object>objects\obj_cmd</object>
+        <object>objects\obj_yourfiles_open</object>
+      </objects>
+      <objects name="filemanager">
+        <objects name="parent">
+          <object>objects\obj_filemanager</object>
+        </objects>
+        <object>objects\obj_yourfilesmanager</object>
       </objects>
     </objects>
     <object>objects\virus</object>
@@ -242,8 +258,8 @@
   <rooms name="rooms">
     <room>rooms\rm_start</room>
     <room>rooms\rm_splashPage</room>
-    <room>rooms\room_example</room>
     <room>rooms\rm_desktop</room>
+    <room>rooms\room_example</room>
     <room>rooms\rm_demo_glitch</room>
     <room>rooms\rm_credits</room>
   </rooms>
