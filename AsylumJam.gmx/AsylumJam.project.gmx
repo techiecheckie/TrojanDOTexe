@@ -81,10 +81,14 @@
       <sprite>sprites\spr_noise</sprite>
     </sprites>
     <sprite>sprites\spr_virus</sprite>
+    <sprite>sprites\spr_pointer</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\test</background>
     <background>background\bg_desktop</background>
+    <background>background\bg_BSOD</background>
+    <background>background\trojanSplash2</background>
+    <background>background\trojanSplash1</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -160,6 +164,7 @@
       </scripts>
     </scripts>
     <script>scripts\dialogue.gml</script>
+    <script>scripts\scr_startMenu.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shd_glitch_combine.shader</shader>
@@ -173,20 +178,21 @@
     <font>fonts\font_Courier10</font>
     <font>fonts\fntSymbolFun</font>
     <font>fonts\fntDialogue</font>
+    <font>fonts\fntBoomPlus</font>
   </fonts>
   <objects name="objects">
     <objects name="example_only">
       <object>objects\obj_example_draw</object>
       <object>objects\obj_example_move</object>
+      <object>objects\obj_Block2</object>
+      <object>objects\obj_SnapBlock</object>
+      <object>objects\obj_TextBlock</object>
+      <object>objects\obj_Block1</object>
+      <object>objects\obj_Btn_Exit</object>
     </objects>
     <objects name="dragNdrop Manager">
       <object>objects\obj_dragNdrop_Mngr</object>
     </objects>
-    <object>objects\obj_Btn_Exit</object>
-    <object>objects\obj_Block1</object>
-    <object>objects\obj_Block2</object>
-    <object>objects\obj_SnapBlock</object>
-    <object>objects\obj_TextBlock</object>
     <objects name="Glitch">
       <object>objects\obj_glitch</object>
       <object>objects\obj_glitch_demo</object>
@@ -206,15 +212,21 @@
         <object>objects\obj_cmd</object>
       </objects>
     </objects>
-    <object>objects\oControl</object>
-    <object>objects\oDialogueInit</object>
-    <object>objects\oDialogue</object>
     <object>objects\virus</object>
+    <object>objects\obj_startMenu</object>
+    <object>objects\obj_credits</object>
+    <objects name="Dialogue">
+      <object>objects\oControl</object>
+      <object>objects\oDialogueInit</object>
+      <object>objects\oDialogue</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_splashPage</room>
     <room>rooms\rm_desktop</room>
     <room>rooms\room_example</room>
     <room>rooms\rm_demo_glitch</room>
+    <room>rooms\rm_credits</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
