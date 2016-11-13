@@ -17,9 +17,6 @@ if (!surface_exists(surf)) {
     surf = surface_create(areaWidth, areaHeight);
 }
 
-if (!surface_exists(buttonSurf)) {
-    buttonSurf = surface_create(buttonsWidth, buttonHeight);
-}
 surface_set_target(surf);
 draw_clear_alpha(textboxColor, 1);
 draw_set_color(textColor);
@@ -47,10 +44,7 @@ if (scrollScale > 0) {
 }
 
 // draw buttons
-dialogbox_draw_buttons();
-if (ds_list_size(buttons) > 0) {
-    draw_surface(buttonSurf, xx + totalWidth/2 - buttonsWidth/2, yy+areaHeight+areaY*2);
-}
+dialogbox_draw_buttons(xx + totalWidth/2 - buttonsWidth/2, yy+areaHeight+areaY*2);
 
 draw_set_color(c_white);
 

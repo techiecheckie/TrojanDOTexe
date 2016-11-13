@@ -29,5 +29,3 @@ for (var i = 0; i < ds_list_size(buttons); i++ ) {
 buttonsWidth = totalWidth;
 show_message(buttonsWidth);
 
-surface_free(buttonSurf);
-buttonSurf = surface_create(buttonsWidth, buttonHeight);

@@ -73,6 +73,7 @@
       <sprite>sprites\spr_window_x_button</sprite>
       <sprite>sprites\spr_cmd</sprite>
       <sprite>sprites\spr_button</sprite>
+      <sprite>sprites\spr_button_hover</sprite>
     </sprites>
     <sprites name="glitch">
       <sprite>sprites\spr_glitch1</sprite>
