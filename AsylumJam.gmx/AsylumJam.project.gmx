@@ -178,6 +178,7 @@
         <script>scripts\filemanager_init.gml</script>
         <script>scripts\filemanager_draw.gml</script>
         <script>scripts\filemanager_update.gml</script>
+        <script>scripts\filemanager_DOCUMENTATION.gml</script>
       </scripts>
       <scripts name="shared">
         <script>scripts\draw_outlined_pane.gml</script>
