@@ -18,7 +18,7 @@ var yy = y+windowHeight;
             draw_text(xx+5, yy+i*__clh, __cl[i]);
         }
         
-        var _caretx = 5 + string_width('>' + keyboard_string);
+        var _caretx = 5 + string_width('C:\' + filepath + '> ' + keyboard_string);
         var _caretx2 = _caretx + string_width('w');
         
         if (__cticker >= room_speed / 2) {
@@ -27,7 +27,7 @@ var yy = y+windowHeight;
         }
         
         draw_set_color(c_white);
-        draw_text(xx+5, yy+__ch - __clh, '>' + keyboard_string+ __ctickerafter);
+        draw_text(xx+5, yy+__ch - __clh, 'C:\' + filepath + '> ' + keyboard_string+ __ctickerafter);
         
         // draw the window bar
         window_draw(xx, yy);

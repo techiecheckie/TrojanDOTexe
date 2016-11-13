@@ -61,25 +61,17 @@
     <extension index="1">extensions\Smooth Dialogue Engine</extension>
     <extension index="2">extensions\In-game console</extension>
     <extension index="3">extensions\dragNdrop Scripts</extension>
+    <extension index="4">extensions\UpdatedDialogueEngine</extension>
   </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\sGreen</sprite>
-    <sprite>sprites\sBlue</sprite>
-    <sprite>sprites\sPink</sprite>
-    <sprite>sprites\sShadow</sprite>
-    <sprites name="example_only">
-      <sprite>sprites\spr_truck</sprite>
-    </sprites>
-    <sprite>sprites\spr_Block1</sprite>
-    <sprite>sprites\spr_Block2</sprite>
-    <sprite>sprites\spr_SnapBlock</sprite>
     <sprite>sprites\spr_NewCursor</sprite>
     <sprite>sprites\spr_CustomCursor</sprite>
     <sprite>sprites\spr_Btn_Exit</sprite>
     <sprites name="ui">
       <sprite>sprites\spr_window_bar</sprite>
       <sprite>sprites\spr_window_x_button</sprite>
+      <sprite>sprites\spr_cmd</sprite>
     </sprites>
     <sprites name="glitch">
       <sprite>sprites\spr_glitch1</sprite>
@@ -88,14 +80,14 @@
       <sprite>sprites\spr_glitch4</sprite>
       <sprite>sprites\spr_noise</sprite>
     </sprites>
+    <sprite>sprites\spr_virus</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\bGround</background>
     <background>background\test</background>
+    <background>background\bg_desktop</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\dialogue.gml</script>
     <scripts name="example_only">
       <script>scripts\string_to_real.gml</script>
     </scripts>
@@ -167,6 +159,7 @@
         <script>scripts\dialogbox_step.gml</script>
       </scripts>
     </scripts>
+    <script>scripts\dialogue.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shd_glitch_combine.shader</shader>
@@ -175,19 +168,13 @@
     <shader type="GLSLES">shaders\shader3.shader</shader>
   </shaders>
   <fonts name="fonts">
-    <font>fonts\fntDialogue</font>
     <font>fonts\fntInfo</font>
     <font>fonts\fnt_console</font>
     <font>fonts\font_Courier10</font>
+    <font>fonts\fntSymbolFun</font>
+    <font>fonts\fntDialogue</font>
   </fonts>
   <objects name="objects">
-    <objects name="Dialogue">
-      <object>objects\oDialogue</object>
-      <object>objects\oControl</object>
-      <object>objects\oGreen</object>
-      <object>objects\oPink</object>
-      <object>objects\oBlue</object>
-    </objects>
     <objects name="example_only">
       <object>objects\obj_example_draw</object>
       <object>objects\obj_example_move</object>
@@ -215,13 +202,19 @@
       <objects name="dialogbox">
         <object>objects\obj_dialogbox</object>
       </objects>
+      <objects name="icons">
+        <object>objects\obj_cmd</object>
+      </objects>
     </objects>
+    <object>objects\oControl</object>
+    <object>objects\oDialogueInit</object>
+    <object>objects\oDialogue</object>
+    <object>objects\virus</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_demo_glitch</room>
+    <room>rooms\rm_desktop</room>
     <room>rooms\room_example</room>
-    <room>rooms\rm_Demo_dragNdrop</room>
-    <room>rooms\room0</room>
+    <room>rooms\rm_demo_glitch</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

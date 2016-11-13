@@ -2,7 +2,8 @@
 
     // this script should be called in "begin step" event, to stop all kbd events
 
-    if keyboard_check_pressed(192) or (__c and keyboard_check(vk_escape)) {
+    if (!__c && keyboard_check_pressed(192)) or (__c and keyboard_check(vk_escape)) {
+        keyboard_key_release(192);
         keyboard_string = '';
         __c = !__c;
     }

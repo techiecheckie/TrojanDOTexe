@@ -39,44 +39,140 @@
     command = args[0];
     
     var _wrong = 'wrong number / no arguments provided!';
+
+    // Set up the last command.
+    var lastCommand = command;
+    lastCommand = 'C:\' + filepath + '> ' + args[0] + " " + args[1];
+    console_log(lastCommand, c_white);
     
     // execute provided command
     
     switch(command) {
         case 'help':
-            console_log('>> available commands <<', c_green);
-            console_log(' exit // ends game', c_white);
-            console_log(' clear // clears screen', c_white);
-            console_log(' random a [b] // returns random integer number between 0 -a, or a and b if provided', c_white);
-            console_log(' hello name // says hello to person with provided name', c_white);
-            console_log(' argtest ... ... ... ... // says how many arguments you provided (4 max)', c_white);
+            console_log('yoU aRe beYonD hOpe', c_purple);
         break;
-        case 'exit':
-            game_end();
+        
+        case 'cmdlist':
+            console_log('cd [filepath]: change directory', c_white);
+            console_log('clear: clear console', c_white);
+            console_log('dir: list items in current directory', c_white);
         break;
+        
         case 'clear':
             for(var i = 0; i <= __cnol; i++) {
                 __cl[i] = '';
             }
         break;
-        case 'random':
-            if args[1] == '' {
-                console_log(_wrong, c_red);
-            } else {
-                if args[2] != '' {
-                    console_log(irandom_range(string_to_real(args[1]), string_to_real(args[2])), c_yellow);
+        
+        case 'ls':
+            console_log('thIs Is WinD0ws.', c_purple);
+            console_log('bEtcHA thoUgHT yOU wErE clEVer ThO', c_purple);
+        break;
+        
+        case 'dir':
+            if (filepath == "Dekstop") {
+                if args[1] == '' {
+                    console_log("cmd.exe   internetexplorer.exe   ", c_white);
+                    console_log("TrojanDOTexe.exe", c_red);
+                    console_log("RecycleBin\    YourFiles\   ", c_blue);
                 } else {
-                    console_log(irandom(string_to_real(args[1])), c_yellow);
+                    console_log("dir command cannot take args: " + args[1], c_red);
+                    console_log("niCe tRY tHo", c_purple);
+                }
+            }
+            else if (filepath == "Dekstop\RecycleBin") {
+                if (args[1] == '') {
+                    var st = ".   ..   ";
+                    for (var i = 0; i < totalFiles; i++) {
+                        if ((i > 0) && (i % 2) && !(i == totalFiles-1) && !(recycleBin[i] == "")) {
+                            st += recycleBin[i] + "#";
+                            console_log(st, c_white);
+                            st = "";
+                        }
+                        else if !(recycleBin[i] == ""){
+                            st += recycleBin[i] + "   ";
+                        }
+                    }
+                    console_log(st, c_white);
+                } else {
+                    console_log("dir command cannot take args: " + args[1], c_red);
+                    console_log("deFIancE isnOt cuTE huMAN", c_purple);
+                }
+            }
+            
+            else if (filepath == "Dekstop\YourFiles") {
+                if args[1] == '' {
+                    console_log(".   ..   CORRUPT1   CORRUPTASFUCK   ", c_white);
+                    console_log("GOT_THIS_ONE_TOO   ALREADY-TR0J4Ns", c_white);
+                    console_log("TOO-BAD-SOOOOO-SAD   LATEBIRD.LATEBIRD  ", c_white);
+                } else {
+                    console_log("dir command cannot take args: " + args[1], c_red);
+                    console_log("noT AMUSED", c_purple);
                 }
             }
         break;
-        case 'hello':
+        
+        case 'cd':
             if args[1] == '' {
-                console_log(_wrong, c_red);
-            } else {
-                console_log(choose('Hi', 'Hello', 'Welcome', 'Good morning') + ' ' + args[1], c_purple);
+                console_log("cd command requires arguments", c_red);
+                console_log("yOU hAve NO idEA whAT YoU ARedOIng, dO YoU?", c_purple);
+            } else if (args[1] == "."){
+                break;
             }
-        break;
+            else if (filepath == "Dekstop" && args[1] == "..") {
+                console_log("cOORUUPTED*&)@Q(465", c_red);
+                console_log("nOwhEre 2 gO", c_purple);
+            }
+            else if (filepath != "Dekstop" && args[1] == "..") {
+                filepath = "Dekstop";
+            }
+            else if (args[1] == "RecycleBin") {
+                filepath = "Dekstop\RecycleBin";
+            }
+            else if (args[1] == "YourFiles") {
+                filepath = "Dekstop\YourFiles";
+            }
+            else {
+                console_log(args[1] + " is not a directory.", c_red);
+            }
+            break;
+        
+        case 'rm':
+            if (args[1] == '') {
+                console_log("rm command requires arguments", c_red);
+                console_log("cLUuUuUuUUUUUULeSS", c_purple);
+            } else if (filepath == "Dekstop" && args[1] != "TrojanDOTexe.exe"){
+                console_log("sRy reMoVED thAT fuNCtion in THis FoLDer", c_purple);
+            } else if (filepath == "Dekstop" && args[1] == "TrojanDOTexe.exe") {
+                console_log("yoU'Ll neVer gET RId oF mE!1", c_purple);
+            } else if (filepath == "Dekstop\RecycleBin" && string_pos(".bin", args[1])){
+                console_log("nOPe, i NeED tHOse to DestROy YoU", c_purple);
+            } else if (filepath == "Dekstop\RecycleBin" && string_pos(".temp", args[1])) {
+                for (var i = 0; i < totalFiles; i++) {
+                    if (recycleBin[i] == args[1]+"   ") {
+                        for (var j = i; j <= totalFiles-1; j++) {
+                            if (j == totalFiles-1) {
+                                show_debug_message("In j == totalFiles-1.");
+                                totalFiles--;
+                                recycleBin[j] = "";
+                                //exit;
+                            }
+                            else {
+                                show_debug_message("In j != totalFiles-1.");
+                                recycleBin[j] = recycleBin[j+1];
+                            }
+                        }
+                        exit;
+                    }
+                }
+                console_log("File does not exist.", c_red);
+            }
+            else {
+                console_log("File cannot be found in " + filepath + ".", c_red);
+            }
+            
+            break;
+
         case 'argtest':
             var i, total, str;
             total = 0;
@@ -93,12 +189,14 @@
                 }
             }
             console_log('you entered ' + string(total) + ' arguments' + str, c_lime);
-        break;
+            break;
+        
         default:
             if (command == '') {
                 //console_log('', c_white); // if you want to have empty line on vk_enter, uncomment
             } else {
-                console_log('command "' + command + '" unkown! enter "help" to see available options', c_red);
+                console_log(command + ': command not recognized on this machine.', c_red);
+                console_log("lol, i DiSabLEd moST oF th0SE", c_purple);
             }
         break;
     }
