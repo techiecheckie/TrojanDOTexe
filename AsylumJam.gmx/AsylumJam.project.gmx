@@ -177,6 +177,10 @@
       <script>scripts\draw_sprite_bar.gml</script>
     </scripts>
     <script>scripts\scr_startMenu.gml</script>
+    <scripts name="persistent">
+      <script>scripts\persistent_step.gml</script>
+      <script>scripts\persistent_init.gml</script>
+    </scripts>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shd_glitch_combine.shader</shader>
@@ -233,11 +237,13 @@
       <object>objects\oDialogueInit</object>
       <object>objects\oDialogue</object>
     </objects>
+    <object>objects\obj_control</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_start</room>
     <room>rooms\rm_splashPage</room>
-    <room>rooms\rm_desktop</room>
     <room>rooms\room_example</room>
+    <room>rooms\rm_desktop</room>
     <room>rooms\rm_demo_glitch</room>
     <room>rooms\rm_credits</room>
   </rooms>
