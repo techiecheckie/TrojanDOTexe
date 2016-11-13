@@ -10,3 +10,10 @@ textHeight = string_height_ext(text, -1, textWidth) + padding*2
 //
 scrollPos = 0
 scrollScale = max(0, textHeight - areaHeight)
+
+if (areaHeight > textHeight) {
+    areaHeight = textHeight;
+}
+
+surface_free(surf);
+surf = surface_create(areaWidth, areaHeight);

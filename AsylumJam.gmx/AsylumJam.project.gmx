@@ -72,6 +72,7 @@
       <sprite>sprites\spr_window_bar</sprite>
       <sprite>sprites\spr_window_x_button</sprite>
       <sprite>sprites\spr_cmd</sprite>
+      <sprite>sprites\spr_button</sprite>
     </sprites>
     <sprites name="glitch">
       <sprite>sprites\spr_glitch1</sprite>
@@ -154,12 +155,18 @@
       <scripts name="dialogbox">
         <script>scripts\dialogbox_init.gml</script>
         <script>scripts\dialogbox_draw.gml</script>
-        <script>scripts\dialogbox_add_button.gml</script>
         <script>scripts\dialogbox_set_text.gml</script>
         <script>scripts\dialogbox_step.gml</script>
+        <scripts name="button">
+          <script>scripts\dialogbox_add_button.gml</script>
+          <script>scripts\dialogbox_draw_buttons.gml</script>
+        </scripts>
       </scripts>
     </scripts>
     <script>scripts\dialogue.gml</script>
+    <scripts name="utils">
+      <script>scripts\draw_sprite_bar.gml</script>
+    </scripts>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shd_glitch_combine.shader</shader>
@@ -201,6 +208,7 @@
       </objects>
       <objects name="dialogbox">
         <object>objects\obj_dialogbox</object>
+        <object>objects\obj_dialogbutton</object>
       </objects>
       <objects name="icons">
         <object>objects\obj_cmd</object>
@@ -212,8 +220,8 @@
     <object>objects\virus</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_desktop</room>
     <room>rooms\room_example</room>
+    <room>rooms\rm_desktop</room>
     <room>rooms\rm_demo_glitch</room>
   </rooms>
   <help>
