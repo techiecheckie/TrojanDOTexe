@@ -76,6 +76,7 @@
       <sprite>sprites\spr_button_hover</sprite>
       <sprite>sprites\spr_file</sprite>
       <sprite>sprites\spr_folder</sprite>
+      <sprite>sprites\spr_recyclebin</sprite>
     </sprites>
     <sprites name="glitch">
       <sprite>sprites\spr_glitch1</sprite>
@@ -176,6 +177,7 @@
       <scripts name="filemanager">
         <script>scripts\filemanager_init.gml</script>
         <script>scripts\filemanager_draw.gml</script>
+        <script>scripts\filemanager_update.gml</script>
       </scripts>
       <scripts name="shared">
         <script>scripts\draw_outlined_pane.gml</script>
@@ -237,12 +239,14 @@
       <objects name="icons">
         <object>objects\obj_cmd</object>
         <object>objects\obj_yourfiles_open</object>
+        <object>objects\obj_recycle_open</object>
       </objects>
       <objects name="filemanager">
         <objects name="parent">
           <object>objects\obj_filemanager</object>
         </objects>
         <object>objects\obj_yourfilesmanager</object>
+        <object>objects\obj_recyclebinfilesmanager</object>
       </objects>
     </objects>
     <object>objects\virus</object>
