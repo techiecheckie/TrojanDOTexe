@@ -13,6 +13,8 @@ scrollpane_init(windowWidth - 24, height-urlbarHeight+urlbarPad*2-20-backbuttonH
 state = 0;
 back = -1;
 
+isInteractable = true;
+
 internet_switch_page(0);
 
 // TODO: plz replace these.

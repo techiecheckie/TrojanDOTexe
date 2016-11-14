@@ -7,6 +7,10 @@ var yy = y + windowHeight;
 
 var totalHeight = areaHeight+areaY*2;
 var totalWidth = windowWidth-1;
+
+if (!ds_exists(buttons, ds_type_list)) {
+    exit;
+}
 if (ds_list_size(buttons) > 0) {
     totalHeight += buttonHeight + buttonPadding *2;
 }
@@ -46,8 +50,9 @@ if (scrollScale > 0) {
 }
 
 // draw buttons
-dialogbox_draw_buttons(xx + totalWidth/2 - buttonsWidth/2, yy+areaHeight+areaY*2);
-
+if (ds_exists(buttons, ds_type_list)) {
+    dialogbox_draw_buttons(xx + totalWidth/2 - buttonsWidth/2, yy+areaHeight+areaY*2);
+}
 draw_set_color(c_white);
 
 window_draw();

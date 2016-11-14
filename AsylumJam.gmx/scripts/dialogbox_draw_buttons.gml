@@ -2,9 +2,18 @@ var xx = argument0;
 var yy = argument1;
 
 // draw all the buttons
+if (!ds_exists(buttons, ds_type_list)) {
+    exit;
+}
+
 if (ds_list_size(buttons) > 0) {
 
     var currentHovering = -1;
+        
+        // draw all the buttons
+    if (!ds_exists(buttons, ds_type_list)) {
+        exit;
+    }
 
     for (var i = 0; i < ds_list_size(buttons); i++ ) {
         var b = ds_list_find_value(buttons, i);
@@ -31,6 +40,11 @@ if (ds_list_size(buttons) > 0) {
                 show_message("Pressed button " + button.text);
             }
         }
+    }
+    
+        // draw all the buttons
+    if (!ds_exists(buttons, ds_type_list)) {
+        exit;
     }
     
     for (var i = 0; i < ds_list_size(buttons); i++ ) {

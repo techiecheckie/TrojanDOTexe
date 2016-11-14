@@ -93,6 +93,7 @@
       <sprite>sprites\spr_ad_pony</sprite>
       <sprite>sprites\spr_weather_icon</sprite>
       <sprite>sprites\spr_internet_buttons</sprite>
+      <sprite>sprites\spr_download_antivirus</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -197,6 +198,9 @@
         <script>scripts\internet_draw.gml</script>
         <script>scripts\internet_switch_page.gml</script>
         <script>scripts\internet_page_draw.gml</script>
+        <scripts name="button_scripts">
+          <script>scripts\cancel_internet_dialog.gml</script>
+        </scripts>
       </scripts>
       <scripts name="scrollpane">
         <script>scripts\scrollpane_init.gml</script>

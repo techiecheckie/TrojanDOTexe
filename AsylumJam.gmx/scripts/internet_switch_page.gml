@@ -9,7 +9,7 @@ switch(argument0) {
     
     case 1:
         scrollpane_init(windowWidth - 24, height-urlbarHeight+urlbarPad*2-20-backbuttonHeight, 
-        256+string_height_ext(mainArticleCopy,-1,scrollpaneWidth - 32));
+        256+string_height_ext(mainArticleCopy,-1,scrollpaneWidth - 32) + 72);
         url = "http://faboo.com";
         back = 0;
     break;
