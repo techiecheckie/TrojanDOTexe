@@ -48,16 +48,10 @@ enum SCENE {
     VIRUS_WIFIOFF,
     VIRUS_OPENINTERNET1,
     VIRUS_OPENINTERNET2,
-    VIRUS_OPENCONSOLE1,
-    VIRUS_OPENCONSOLE2,
     VIRUS_OPENBIN1,
     VIRUS_OPENBIN2,
-    VIRUS_LSCOMMAND1,
-    VIRUS_LSCOMMAND2,
-    VIRUS_LSCOMMAND3,
-    VIRUS_CSCOMMAND1,
-    VIRUS_CSCOMMAND2,
-    VIRUS_CSCOMMAND3
+    VIRUS_CACHEDELETED,
+    VIRUS_BODYDELETED
 }
 
 ///////////////////////////////////////////
@@ -70,7 +64,7 @@ enum SCENE {
 
 // VIRUS_START
 ds_map_add(global.tooxt, "virus0_0", "EHEHEHEHEHEHEHE!");
-ds_map_add(global.tooxt, "virus0_1", "YOi siLlY hUMaNs dON't LiKE tO rEad tHe TERMS OF SERVICE, dO YOu?");
+ds_map_add(global.tooxt, "virus0_1", "YOu siLlY hUMaNs dON't LiKE tO rEad tHe TERMS OF SERVICE, dO YOu?");
 ds_map_add(global.tooxt, "virus0_2", "must bE bECaUse yOU rEaD SO SLOOOOOOOOWLYYYYYY!");
 ds_map_add(global.tooxt, "virus0_3", "SAYs On yOUR humAn iNteRneT...");
 ds_map_add(global.tooxt, "virus0_4", "tWo hUnDREd fiFTY woRdS A mINuTe? hOW PATHETIC!1!");
@@ -84,9 +78,8 @@ ds_map_add(global.tooxt, "virus0_11", "tHe naKeD piCs yOu took? ALL MINE!!!");
 ds_map_add(global.tooxt, "virus0_12", "waAIt HerE StuPId hUm4n");
 ds_map_add(global.tooxt, "virus0_13", "wAIt for THe EnD");
 ds_map_add(global.tooxt, "virus0_14", "EHEHHEHEHEHEHAHAHAhhaha");
+ds_map_add(global.tooxt, "virus0_15", "jUsT 1O MiNUTeS LEft unTIl YoUR DOOM!!!1!1!");
 
-// VIRUS_10MINS
-ds_map_add(global.tooxt, "virus1_0", "bASe 1O MiNUTeS LEft unTIl YoUR DOOM!!!1!1!");
 
 // VIRUS_9MINS
 ds_map_add(global.tooxt, "virus2_0", "mULTipLEs of 9: 9, 18, 27, 36, 45, 54...");
@@ -165,7 +158,7 @@ ds_map_add(global.tooxt, "virus11_0", "dON't gEt coMfY.");
 ds_map_add(global.tooxt, "virus11_1", "i nEed WiFi to TaP yoUR baNK AccOUnts");
 
 //VIRUS_WIFIOFF
-ds_map_add(global.tooxt, "virus12_0", "tRyIng thIs agAIn?");
+ds_map_add(global.tooxt, "virus12_0", "hEehEe. n0 inTerNet foR u");
 
 //VIRUS_OPENINTERNET1
 ds_map_add(global.tooxt, "virus13_0", "thAt cAN'T help U!!");
@@ -174,26 +167,19 @@ ds_map_add(global.tooxt, "virus13_0", "thAt cAN'T help U!!");
 ds_map_add(global.tooxt, "virus14_0", "tRyIng thIs agAIn?");
 ds_map_add(global.tooxt, "virus14_1", "yOUr thOUght proCesSES aRE sO inEffICIenT");
 
-//VIRUS_OPENCONSOLE1
-ds_map_add(global.tooxt, "virus15_0", "dO yOu evEn KnoW hOW to USe ThIS At ALl?");
-
 //VIRUS_OPENBIN1
-ds_map_add(global.tooxt, "virus16_0", "tRyIng thIs agAIn?");
+ds_map_add(global.tooxt, "virus15_0", "tRyIng thIs agAIn?");
 
 //VIRUS_OPENBIN2
-ds_map_add(global.tooxt, "virus17_0", "tRyIng thIs agAIn?");
-//VIRUS_LSCOMMAND1
-ds_map_add(global.tooxt, "virus18_0", "tRyIng thIs agAIn?");
-//VIRUS_LSCOMMAND2
-ds_map_add(global.tooxt, "virus19_0", "tRyIng thIs agAIn?");
-//VIRUS_LSCOMMAND3
-ds_map_add(global.tooxt, "virus20_0", "tRyIng thIs agAIn?");
-//VIRUS_CSCOMMAND1
-ds_map_add(global.tooxt, "virus21_0", "tRyIng thIs agAIn?");
-//VIRUS_CSCOMMAND2
-ds_map_add(global.tooxt, "virus22_0", "tRyIng thIs agAIn?");
-//VIRUS_CSCOMMAND3
-ds_map_add(global.tooxt, "virus23_0", "tRyIng thIs agAIn?");
+ds_map_add(global.tooxt, "virus16_0", "tRyIng thIs agAIn?");
+
+//VIRUS_CACHEDELETED
+ds_map_add(global.tooxt, "virus17_0", "HAY");
+ds_map_add(global.tooxt, "virus17_1", "i WAs UsINg ThOSE!11");
+
+//VIRUS_BODYDELETED
+ds_map_add(global.tooxt, "virus18_0", "AHflaskgjlSJGLHHGHLSKSLD nOOOOOo");
+ds_map_add(global.tooxt, "virus18_1", "st0P th!s hYou)0mAN");
 
 </string>
           </argument>

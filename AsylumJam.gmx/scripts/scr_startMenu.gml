@@ -7,7 +7,9 @@ switch (mpos)
     {
         with(obj_startMenu) {
             instance_destroy();
+            audio_stop_all();
         }
+        audio_play_sound(snd_note, 10, 0);
         var dialogbox = instance_create(75, 0, obj_dialogbox);
         with (dialogbox) {
             dialogbox_set_text("ACTIVEX UPDATE REQUIRED TO PLAY. PLEASE ACCEPT TERMS OF SERVICE TO CONTINUE.

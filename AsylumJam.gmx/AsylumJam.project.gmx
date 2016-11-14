@@ -63,7 +63,27 @@
     <extension index="3">extensions\dragNdrop Scripts</extension>
     <extension index="4">extensions\UpdatedDialogueEngine</extension>
   </NewExtensions>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sounds name="Music">
+      <sound>sound\mus_mainTheme</sound>
+      <sound>sound\mus_loopA</sound>
+      <sound>sound\mus_loopB</sound>
+      <sound>sound\mus_loopC</sound>
+      <sound>sound\mus_loopD</sound>
+      <sound>sound\mus_victory</sound>
+      <sound>sound\mus_defeat</sound>
+      <sound>sound\mus_trojan</sound>
+    </sounds>
+    <sounds name="Boops">
+      <sound>sound\snd_clickY</sound>
+      <sound>sound\snd_clickN</sound>
+      <sound>sound\snd_note</sound>
+      <sound>sound\snd_click</sound>
+      <sound>sound\snd_crash</sound>
+      <sound>sound\snd_warnA</sound>
+      <sound>sound\snd_warnB</sound>
+    </sounds>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_NewCursor</sprite>
     <sprite>sprites\spr_CustomCursor</sprite>
@@ -103,6 +123,9 @@
       <sprite>sprites\spr_ad_cloud_page</sprite>
       <sprite>sprites\spr_weather_page</sprite>
     </sprites>
+    <sprite>sprites\mainPageSprite</sprite>
+    <sprite>sprites\spr_win</sprite>
+    <sprite>sprites\spr_lose</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\test</background>
@@ -231,8 +254,17 @@
       <script>scripts\persistent_room_start.gml</script>
     </scripts>
     <scripts name="Narrative Scripts">
+      <script>scripts\scr_hitAllFlags.gml</script>
       <script>scripts\scr_downloadActiveX.gml</script>
       <script>scripts\scr_noDownloadAX.gml</script>
+      <script>scripts\scr_startAntivirus.gml</script>
+      <script>scripts\scr_fileDeleted.gml</script>
+      <script>scripts\scr_cacheDeleted.gml</script>
+      <script>scripts\scr_fileAndCacheDeleted.gml</script>
+      <script>scripts\scr_restoreFiles.gml</script>
+      <script>scripts\scr_deletedMainBody.gml</script>
+      <script>scripts\scr_runGameWinSequence.gml</script>
+      <script>scripts\scr_closeAntivirus.gml</script>
     </scripts>
   </scripts>
   <shaders name="shaders">
@@ -296,6 +328,8 @@
       <objects name="internet">
         <object>objects\obj_internet_browser</object>
       </objects>
+      <object>objects\obj_gameOver</object>
+      <object>objects\obj_gameWon</object>
     </objects>
     <object>objects\virus</object>
     <object>objects\obj_startMenu</object>
@@ -306,8 +340,11 @@
       <object>objects\oDialogue</object>
     </objects>
     <object>objects\obj_control</object>
-    <object>objects\gameControl</object>
     <object>objects\obj_timer</object>
+    <object>objects\eventFire</object>
+    <object>objects\antivirusHandlerObject</object>
+    <object>objects\splashEffect</object>
+    <object>objects\obj_sound</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tl_virusIntro</timeline>
@@ -315,6 +352,8 @@
   <rooms name="rooms">
     <room>rooms\rm_start</room>
     <room>rooms\rm_splashPage</room>
+    <room>rooms\rm_gameOver</room>
+    <room>rooms\rm_gameWon</room>
     <room>rooms\rm_desktop</room>
     <room>rooms\room_example</room>
     <room>rooms\rm_demo_glitch</room>

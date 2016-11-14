@@ -26,7 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>/// Set dialogue box variables
-
 msg[0] = ""; // placeholder msg text
 text = 0;    // char
 cur = 0;     // current message
@@ -37,7 +36,7 @@ padding = 24;           // text padding
 max_width = 280;        // max width of text box
 inside_col = c_white;   // inside color of box
 text_col = c_dkgray;    // text color
-key = ord("Z");         // interaction key
+key = vk_space;         // interaction key
 sp = 0.2;                 // characters per step
 
 //display_reset(8, true); // smooth shapes
@@ -77,6 +76,29 @@ alpha = 0;              // transparency -- changes with phase
 
 draw_set_valign(fa_top);
 draw_set_halign(fa_left);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Dummy event
 </string>
           </argument>
         </arguments>
@@ -163,6 +185,7 @@ if (keyboard_check_pressed(key)) {
 // move one to next message if it exists - destroy otherwise
 if (text == string_length(msg[cur]) &amp;&amp; keyboard_check_pressed(key) &amp;&amp; phase == 1) {
     if (cur &lt; array_length_1d(msg) - 1) {
+        alarm[0] = 300;
         cur++;
         text = 0;
         phase = 0;
