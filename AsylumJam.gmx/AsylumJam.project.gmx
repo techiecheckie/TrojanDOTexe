@@ -197,16 +197,16 @@
       <script>scripts\persistent_room_start.gml</script>
     </scripts>
     <scripts name="Narrative Scripts">
+      <script>scripts\scr_hitAllFlags.gml</script>
       <script>scripts\scr_downloadActiveX.gml</script>
       <script>scripts\scr_noDownloadAX.gml</script>
       <script>scripts\scr_startAntivirus.gml</script>
       <script>scripts\scr_fileDeleted.gml</script>
       <script>scripts\scr_cacheDeleted.gml</script>
-      <script>scripts\scr_hitAllFlags.gml</script>
-      <script>scripts\scr_runGameWinSequence.gml</script>
       <script>scripts\scr_fileAndCacheDeleted.gml</script>
       <script>scripts\scr_restoreFiles.gml</script>
       <script>scripts\scr_deletedMainBody.gml</script>
+      <script>scripts\scr_runGameWinSequence.gml</script>
     </scripts>
   </scripts>
   <shaders name="shaders">

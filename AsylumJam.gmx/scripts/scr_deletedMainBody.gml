@@ -1,3 +1,5 @@
 /// scr_deletedMainBody
 
-/* Just makes it so that the virus's hidden body can be accessed from console.*/
+/* DONE THROUGH CONSOLE -- LEAVE TO ME */
+/* This is activated by using the console to delete the main body after hitting all flags */
+/* The hidden body of the virus can now be grepped for. */
