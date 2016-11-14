@@ -8,7 +8,7 @@
 /* Once you run the antivirus, you can delete temp files from your recycle bin. */
 
 instance_create(0, 0, antivirusHandlerObject);
-
+audio_play_sound(snd_note, 10, 0);
 var dialogbox = instance_create(75, 0, obj_dialogbox);
 with (dialogbox) {
     dialogbox_set_text("MALEVIRUS Booting In Background.

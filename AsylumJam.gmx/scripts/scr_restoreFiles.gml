@@ -6,7 +6,7 @@ automatically. */
 /* Antivirus finds virus files and now you can do a rm of the virus
     from the console. */
 /* Puts an extra file in your console that reveals a hint if you do a "run" cmd. */
-
+audio_play_sound(snd_note, 10, 0);
 var dialogbox = instance_create(75, 0, obj_dialogbox);
 with (dialogbox) {
     dialogbox_set_text("MALEVIRUS found VITAL PROBLEM.
