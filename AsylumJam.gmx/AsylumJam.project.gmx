@@ -87,6 +87,13 @@
     </sprites>
     <sprite>sprites\spr_virus</sprite>
     <sprite>sprites\spr_pointer</sprite>
+    <sprites name="internet">
+      <sprite>sprites\spr_faboo</sprite>
+      <sprite>sprites\spr_internet_large_image</sprite>
+      <sprite>sprites\spr_ad_pony</sprite>
+      <sprite>sprites\spr_weather_icon</sprite>
+      <sprite>sprites\spr_internet_buttons</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\test</background>
@@ -185,6 +192,21 @@
         <script>scripts\filemanager_DOCUMENTATION.gml</script>
         <script>scripts\dialogbox_DOCUMENTATION.gml</script>
       </scripts>
+      <scripts name="internet">
+        <script>scripts\internet_init.gml</script>
+        <script>scripts\internet_draw.gml</script>
+        <script>scripts\internet_switch_page.gml</script>
+        <script>scripts\internet_page_draw.gml</script>
+      </scripts>
+      <scripts name="scrollpane">
+        <script>scripts\scrollpane_init.gml</script>
+        <script>scripts\draw_sprite_on_scrollpane.gml</script>
+        <script>scripts\draw_text_on_scrollpane.gml</script>
+        <script>scripts\draw_text_ext_on_scrollpane.gml</script>
+        <script>scripts\scrollbar_draw.gml</script>
+        <script>scripts\scrollpane_scroll.gml</script>
+        <script>scripts\scrollpane_refresh.gml</script>
+      </scripts>
     </scripts>
     <script>scripts\dialogue.gml</script>
     <script>scripts\scr_startMenu.gml</script>
@@ -214,6 +236,8 @@
     <font>fonts\fntSymbolFun</font>
     <font>fonts\fntDialogue</font>
     <font>fonts\fntBoomPlus</font>
+    <font>fonts\fnt_headline</font>
+    <font>fonts\fnt_article</font>
   </fonts>
   <objects name="objects">
     <objects name="example_only">
@@ -256,6 +280,9 @@
         <object>objects\obj_yourfilesmanager</object>
         <object>objects\obj_recyclebinfilesmanager</object>
       </objects>
+      <objects name="internet">
+        <object>objects\obj_internet_browser</object>
+      </objects>
     </objects>
     <object>objects\virus</object>
     <object>objects\obj_startMenu</object>
@@ -274,9 +301,9 @@
   </timelines>
   <rooms name="rooms">
     <room>rooms\rm_start</room>
+    <room>rooms\room_example</room>
     <room>rooms\rm_splashPage</room>
     <room>rooms\rm_desktop</room>
-    <room>rooms\room_example</room>
     <room>rooms\rm_demo_glitch</room>
     <room>rooms\rm_credits</room>
   </rooms>
