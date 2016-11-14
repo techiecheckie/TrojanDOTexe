@@ -58,10 +58,57 @@ if myTime &gt; 0 {
 }
 else {
     myTime = 0;
-    //Time up!
-    //room_goto(rm_start);
-    }
-showTime = ceil(myTime);
+    /* Need this to be nicely done */
+    room_goto(rm_gameOver);
+}
+minutes = floor(myTime/60);
+seconds = myTime%60;
+showTime = string(minutes) + ":" + string(seconds);
+
+if (minutes == 9 &amp;&amp; seconds &lt; 10 &amp;&amp; !global.flag[FLAGS.V_9MINS] &amp;&amp; !instance_exists(oDialogue)) {
+    global.flag[FLAGS.V_9MINS] = 1;
+    dialogue(SCENE.VIRUS_9MINS, virus);
+}
+
+else if (minutes == 8 &amp;&amp; seconds &lt; 10 &amp;&amp; !global.flag[FLAGS.V_8MINS] &amp;&amp; !instance_exists(oDialogue)) {
+    global.flag[FLAGS.V_8MINS] = 1;
+    dialogue(SCENE.VIRUS_8MINS, virus);
+}
+
+else if (minutes == 7 &amp;&amp; seconds &lt; 10 &amp;&amp; !global.flag[FLAGS.V_7MINS] &amp;&amp; !instance_exists(oDialogue)) {
+    global.flag[FLAGS.V_7MINS] = 1;
+    dialogue(SCENE.VIRUS_7MINS, virus);
+}
+
+else if (minutes == 6 &amp;&amp; seconds &lt; 10 &amp;&amp; !global.flag[FLAGS.V_6MINS] &amp;&amp; !instance_exists(oDialogue)) {
+    global.flag[FLAGS.V_6MINS] = 1;
+    dialogue(SCENE.VIRUS_6MINS, virus);
+}
+
+else if (minutes == 5 &amp;&amp; seconds &lt; 10 &amp;&amp; !global.flag[FLAGS.V_5MINS] &amp;&amp; !instance_exists(oDialogue)) {
+    global.flag[FLAGS.V_5MINS] = 1;
+    dialogue(SCENE.VIRUS_5MINS, virus);
+}
+
+else if (minutes == 4 &amp;&amp; seconds &lt; 10 &amp;&amp; !global.flag[FLAGS.V_4MINS] &amp;&amp; !instance_exists(oDialogue)) {
+    global.flag[FLAGS.V_4MINS] = 1;
+    dialogue(SCENE.VIRUS_4MINS, virus);
+}
+
+else if (minutes == 3 &amp;&amp; seconds &lt; 10 &amp;&amp; !global.flag[FLAGS.V_3MINS] &amp;&amp; !instance_exists(oDialogue)) {
+    global.flag[FLAGS.V_3MINS] = 1;
+    dialogue(SCENE.VIRUS_3MINS, virus);
+}
+
+else if (minutes == 2 &amp;&amp; seconds &lt; 10 &amp;&amp; !global.flag[FLAGS.V_2MINS] &amp;&amp; !instance_exists(oDialogue)) {
+    global.flag[FLAGS.V_2MINS] = 1;
+    dialogue(SCENE.VIRUS_2MINS, virus);
+}
+
+else if (minutes == 1 &amp;&amp; seconds &lt; 10 &amp;&amp; !global.flag[FLAGS.V_1MINS] &amp;&amp; !instance_exists(oDialogue)) {
+    global.flag[FLAGS.V_1MINS] = 1;
+    dialogue(SCENE.VIRUS_1MIN, virus);
+}
 </string>
           </argument>
         </arguments>

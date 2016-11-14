@@ -176,6 +176,13 @@
                                 recycleBin[j] = recycleBin[j+1];
                             }
                         }
+                        global.tempFilesDeleted++;
+                        if (global.tempFilesDeleted == 1) {
+                            global.flag[FLAGS.DELETE_1_FILE] = 1;
+                        }
+                        if (global.tempFilesDeleted >= 7) {
+                            global.flag[FLAGS.DELETED_ALL_FILES] = 1;
+                        }
                         exit;
                     }
                 }

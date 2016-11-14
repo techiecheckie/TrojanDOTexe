@@ -53,6 +53,8 @@ virus.spd = 2.5;
 virus.spd = 0;
 dialogue(SCENE.VIRUS_START, virus);
 timeline_running = 0;
+virus.alarm[0] = 30;
+virus.alarm[1] = 3600;
 </string>
           </argument>
         </arguments>
