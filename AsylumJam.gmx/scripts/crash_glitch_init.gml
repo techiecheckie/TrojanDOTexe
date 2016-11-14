@@ -10,6 +10,6 @@ state = -1;
 transitionSpeed = 0.005;
 glitchTimer = 90;
 noiseTimer = 15;
-crashTimer = 150;
+crashTimer = 90;
 
 glitchImg = spr_glitch1;

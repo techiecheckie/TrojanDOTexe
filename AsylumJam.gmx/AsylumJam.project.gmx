@@ -98,6 +98,7 @@
       <sprite>sprites\spr_folder</sprite>
       <sprite>sprites\spr_recyclebin</sprite>
       <sprite>sprites\spr_internet</sprite>
+      <sprite>sprites\spr_antivirus_icon</sprite>
     </sprites>
     <sprites name="glitch">
       <sprite>sprites\spr_glitch1</sprite>
@@ -231,6 +232,7 @@
         <script>scripts\internet_page_draw.gml</script>
         <scripts name="button_scripts">
           <script>scripts\cancel_internet_dialog.gml</script>
+          <script>scripts\download_antivirus_button.gml</script>
         </scripts>
       </scripts>
       <scripts name="scrollpane">
@@ -265,6 +267,10 @@
       <script>scripts\scr_deletedMainBody.gml</script>
       <script>scripts\scr_runGameWinSequence.gml</script>
       <script>scripts\scr_closeAntivirus.gml</script>
+      <scripts name="callbacks">
+        <script>scripts\goto_desktop.gml</script>
+        <script>scripts\goto_gameover.gml</script>
+      </scripts>
     </scripts>
   </scripts>
   <shaders name="shaders">
@@ -317,6 +323,8 @@
         <object>objects\obj_yourfiles_open</object>
         <object>objects\obj_recycle_open</object>
         <object>objects\obj_internet_open</object>
+        <object>objects\obj_antivirus_open</object>
+        <object>objects\obj_antivirus_slot</object>
       </objects>
       <objects name="filemanager">
         <objects name="parent">

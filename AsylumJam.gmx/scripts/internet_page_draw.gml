@@ -127,7 +127,7 @@ switch (state) {
                     d.depth = -1;
                     with (d) {
                         dialogbox_set_text("Download antivirus?");
-                        dialogbox_add_button("Yes", -1);
+                        dialogbox_add_button("Yes", download_antivirus_button);
                         dialogbox_add_button("No", cancel_internet_dialog);
                     }
                     

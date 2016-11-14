@@ -5,5 +5,6 @@ noise_init();
 noise_active = false;
 
 crash_glitch_init();
+crash_script = -1;
 
 warp_active = false;

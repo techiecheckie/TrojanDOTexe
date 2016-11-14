@@ -59,7 +59,11 @@ if myTime &gt; 0 {
 else {
     myTime = 0;
     /* Need this to be nicely done */
-    room_goto(rm_gameOver);
+    // room_goto(rm_gameOver);
+    with (obj_glitch) {
+        crash_script = goto_gameover;
+        crash_glitch_start();
+    }
 }
 minutes = floor(myTime/60);
 seconds = myTime%60;
