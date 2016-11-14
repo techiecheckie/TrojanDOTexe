@@ -59,6 +59,17 @@ switch (state) {
                 }
             }
             
+            // weather
+            if (point_in_rectangle(mouse_x, mouse_y, actualX+scrollpaneWidth - 48-36, actualY+scrollY+12, 
+                actualX+scrollpaneWidth - 48+36, actualY+scrollY+64)) {
+                
+                if (mouse_check_button_pressed(mb_left)) {
+                    // TODO: incorporate the flags
+                    internet_switch_page(5);
+                    
+                }
+            }
+            
             // right ad
             if (point_in_rectangle(mouse_x, mouse_y, actualX+scrollpaneWidth/2+250-adW/2, actualY+scrollY+160, 
                 actualX+scrollpaneWidth/2+250+adW/2, actualY+scrollY+160+adH)) {
@@ -136,6 +147,10 @@ switch (state) {
     
     case 4: // cloud ad
         draw_sprite_on_scrollpane(spr_ad_cloud_page, 0, 0, 0);
+    break;
+    
+    case 5: // weather
+        draw_sprite_on_scrollpane(spr_weather_page, 0, 0, 0);
     break;
 }
 

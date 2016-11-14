@@ -162,18 +162,18 @@
             } else if (filepath == "Dekstop\RecycleBin" && string_pos(".bin", args[1])){
                 console_log("nOPe, i NeED tHOse to DestROy YoU", c_purple);
             } else if (filepath == "Dekstop\RecycleBin" && string_pos(".temp", args[1])) {
-                for (var i = 0; i < totalFiles; i++) {
-                    if (recycleBin[i] == args[1]+"   ") {
-                        for (var j = i; j <= totalFiles-1; j++) {
-                            if (j == totalFiles-1) {
+                for (var i = 0; i < global.recycleBinSize; i++) {
+                    if (global.recycleBin[i] == args[1]) {
+                        for (var j = i; j <= global.recycleBinSize-1; j++) {
+                            if (j == global.recycleBinSize-1) {
                                 show_debug_message("In j == totalFiles-1.");
-                                totalFiles--;
+                                global.recycleBinSize--;
                                 recycleBin[j] = "";
                                 //exit;
                             }
                             else {
                                 show_debug_message("In j != totalFiles-1.");
-                                recycleBin[j] = recycleBin[j+1];
+                                global.recycleBin[j] = global.recycleBin[j+1];
                             }
                         }
                         exit;

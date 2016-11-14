@@ -34,6 +34,13 @@ switch(argument0) {
         url = "http://faboo.com/cloud";
         back = 0;
     break;
+    
+    case 5: // weather
+        scrollpane_init(windowWidth - 24, height-urlbarHeight+urlbarPad*2-20-backbuttonHeight, 
+        sprite_get_height(spr_weather_page));
+        url = "http://faboo.com/weather";
+        back = 0;
+    break;
 }
 
 state = argument0;
