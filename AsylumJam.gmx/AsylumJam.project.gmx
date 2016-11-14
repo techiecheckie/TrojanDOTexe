@@ -99,6 +99,7 @@
       <sprite>sprites\spr_recyclebin</sprite>
       <sprite>sprites\spr_internet</sprite>
       <sprite>sprites\spr_antivirus_icon</sprite>
+      <sprite>sprites\spr_trojanicon</sprite>
     </sprites>
     <sprites name="glitch">
       <sprite>sprites\spr_glitch1</sprite>
@@ -325,6 +326,7 @@
         <object>objects\obj_recycle_open</object>
         <object>objects\obj_internet_open</object>
         <object>objects\obj_antivirus_open</object>
+        <object>objects\obj_trojan_open</object>
         <object>objects\obj_antivirus_slot</object>
       </objects>
       <objects name="filemanager">

@@ -21,5 +21,5 @@
     }
     __chisp = 0; // current history pointer
     
-    console_log("(C) M1cr050ft W1nd0w5. A11 R1ght5 Ar3 Tr0j4n's.", c_green);
+    console_log("(C) A11 R1ght5 Ar3 Tr0j4n's. Type 'help' for commands.", c_green);
     

@@ -50,12 +50,19 @@
     switch(command) {
         case 'help':
             console_log('yoU aRe beYonD hOpe', c_purple);
+            console_log('BUt maYbe iF U had a coMMaND liKE...', c_purple);
+            console_log('cmdlist...', c_aqua);
         break;
         
         case 'cmdlist':
             console_log('cd [filepath]: change directory', c_white);
             console_log('clear: clear console', c_white);
             console_log('dir: list items in current directory', c_white);
+            console_log("rm: remove files in directory.", c_white);
+            console_log("run [exe file]: run an exe file", c_white);
+            console_log('find .-type f -name ".[FILE EXTENSION]" -print:', c_white);
+            console_log("   Prints all files with a given FILE EXTENSION.", c_white);
+            break;
         break;
         
         case 'clear':
@@ -126,6 +133,7 @@
             }
         break;
         
+
         case 'cd':
             if args[1] == '' {
                 console_log("cd command requires arguments", c_red);
@@ -171,22 +179,26 @@
                     if (global.recycleBin[i] == args[1]) {
                         for (var j = i; j <= global.recycleBinSize-1; j++) {
                             if (j == global.recycleBinSize-1) {
-                                show_debug_message("In j == totalFiles-1.");
+                               
                                 global.recycleBinSize--;
                                 recycleBin[j] = "";
                                 //exit;
                             }
                             else {
-                                show_debug_message("In j != totalFiles-1.");
+                               
                                 global.recycleBin[j] = global.recycleBin[j+1];
                             }
                         }
                         global.tempFilesDeleted++;
                         if (global.tempFilesDeleted >= 1) {
                             global.flag[FLAGS.DELETE_1_FILE] = 1;
+                            console_log("Deleted one temp file.", c_green);
+                            console_log("heYA sshoLe doNt do THat", c_purple);
                         }
                         if (global.tempFilesDeleted >= 7) {
                             global.flag[FLAGS.DELETED_ALL_FILES] = 1;
+                            console_log("Deleted ALL temp files.", c_green);
+                            console_log("i'LL geT u 4 THis", c_purple);
                         }
                         exit;
                     }
@@ -205,6 +217,8 @@
                 } else if (args[1] == '.' && args[2] == '-type' && args[3] == 'f' &&
                         args[4] == '-name' && args[5] == '".XOR"' && args[6] == '-print'){
                     global.flag[FLAGS.DELETE_VIRUS_HIDDEN_FILE] = 1;
+                    console_log("HIDDEN. FILE. TR0J4N.DAT. DELETED.", c_green);
+                    global.flag[FLAGS.GAMEWON] = 1;
                 }
             }
             else {
@@ -212,12 +226,11 @@
                 console_log("lol, i DiSabLEd moST oF th0SE", c_purple);
             }
             break;
-            
         case 'run':
             if (global.flag[FLAGS.RESTORE_FILES]) {
                 if args[1] == '' {
                     console_log("sTISOIOpoOOPP POIITITTTT", c_purple);
-                } else if (args[1] == "RUNME.EXE"){
+                } else if (args[1] == "RUNME.exe"){
                     console_log("The EXT you seek...", c_green);
                     console_log("...is quite unique...", c_green);
                     console_log("Put the right logical op...", c_green);

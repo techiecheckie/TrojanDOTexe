@@ -96,16 +96,10 @@ ds_map_add(global.tooxt, "virus3_2", "EiGhT MINuTeS LEfT!!");
 // VIRUS_7MINS
 ds_map_add(global.tooxt, "virus4_0", "stUPID HUMan LEsson TimE!!");
 ds_map_add(global.tooxt, "virus4_1", "999,999 divided by 7 is exactly 142,857.");
-ds_map_add(global.tooxt, "virus4_2", "Therefore, when a vulgar fraction with 7 in the 
-denominator is converted to a decimal expansion, the result has the same six-digit 
-repeating sequence after the decimal point, but the sequence can start with any of 
-those six digits. For example, 1/7 = 0.142857 142857... and 2/7 = 0.285714 285714....");
+ds_map_add(global.tooxt, "virus4_2", "For example, 1/7 = 0.142857 142857... and 2/7 = 0.285714 285714....");
 ds_map_add(global.tooxt, "virus4_3", "In fact, if one sorts the digits in the number 
 142857 in ascending order, 124578, it is possible to know from which of the digits 
-the decimal part of the number is going to begin with. The remainder of dividing any 
-number by 7 will give the position in the sequence 124578 that the decimal part of 
-the resulting number will start. For example, 628 ÷ 7 = 89 5/7; here 5 is the remainder, 
-and would correspond to number 7 in the ranking of the ascending sequence. So in this case, 
+the decimal part of the number is going to begin with. So in this case, 
 628 ÷ 7 = 89.714285. Another example, 5238 ÷ 7 = 748 2/7, hence the remainder is 2, and 
 this corresponds to number 2 in the sequence. In this case, 5238 ÷ 7 = 748.285714.");
 ds_map_add(global.tooxt, "virus4_4", "in OthEr woRDS...");
@@ -138,48 +132,48 @@ ds_map_add(global.tooxt, "virus9_0", "10 miNUtes lEfT");
 ds_map_add(global.tooxt, "virus9_1", "tHAt'S 2 in BINaRy btW");
 
 // VIRUS_1MIN
-ds_map_add(global.tooxt, "virus8_0", "oHhHhH yeaAahaahHHh");
-ds_map_add(global.tooxt, "virus8_1", "onE mORE MINUTE!!!");
-ds_map_add(global.tooxt, "virus8_2", "i'M gOInG to LOve seLlinG thIs tO the NSA!!");
-ds_map_add(global.tooxt, "virus8_3", "unLEss yOu feEl likE PAyinG $1000?");
+ds_map_add(global.tooxt, "virus10_0", "oHhHhH yeaAahaahHHh");
+ds_map_add(global.tooxt, "virus10_1", "onE mORE MINUTE!!!");
+ds_map_add(global.tooxt, "virus10_2", "i'M gOInG to LOve seLlinG thIs tO the NSA!!");
+ds_map_add(global.tooxt, "virus10_3", "unLEss yOu feEl likE PAyinG $1000?");
 
 // VIRUS_GAMEOVER
-ds_map_add(global.tooxt, "virus9_0", "saY byE-BYE~!!!");
+ds_map_add(global.tooxt, "virus11_0", "saY byE-BYE~!!!");
 
 // VIRUS_GAMEWON
-ds_map_add(global.tooxt, "virus10_0", "h0w&gt;..??");
-ds_map_add(global.tooxt, "virus10_1", "h-w --yo-- do---thIS???234r");
-ds_map_add(global.tooxt, "virus10_2", "nnNOIOfo2llk");
-ds_map_add(global.tooxt, "virus10_3", "@#$)()2sdlakjhAAEt");
-ds_map_add(global.tooxt, "virus10_4", "H--2340--A094--T-23480--E");
+ds_map_add(global.tooxt, "virus12_0", "h0w&gt;..??");
+ds_map_add(global.tooxt, "virus12_1", "h-w --yo-- do---thIS???234r");
+ds_map_add(global.tooxt, "virus12_2", "nnNOIOfo2llk");
+ds_map_add(global.tooxt, "virus12_3", "@#$)()2sdlakjhAAEt");
+ds_map_add(global.tooxt, "virus12_4", "H--2340--A094--T-23480--E");
 
 // VIRUS_WIFION
-ds_map_add(global.tooxt, "virus11_0", "dON't gEt coMfY.");
-ds_map_add(global.tooxt, "virus11_1", "i nEed WiFi to TaP yoUR baNK AccOUnts");
+ds_map_add(global.tooxt, "virus13_0", "dON't gEt coMfY.");
+ds_map_add(global.tooxt, "virus13_1", "i nEed WiFi to TaP yoUR baNK AccOUnts");
 
 //VIRUS_WIFIOFF
-ds_map_add(global.tooxt, "virus12_0", "hEehEe. n0 inTerNet foR u");
+ds_map_add(global.tooxt, "virus14_0", "hEehEe. n0 inTerNet foR u");
 
 //VIRUS_OPENINTERNET1
-ds_map_add(global.tooxt, "virus13_0", "thAt cAN'T help U!!");
+ds_map_add(global.tooxt, "virus15_0", "thAt cAN'T help U!!");
 
 //VIRUS_OPENINTERNET2
-ds_map_add(global.tooxt, "virus14_0", "tRyIng thIs agAIn?");
-ds_map_add(global.tooxt, "virus14_1", "yOUr thOUght proCesSES aRE sO inEffICIenT");
+ds_map_add(global.tooxt, "virus16_0", "tRyIng thIs agAIn?");
+ds_map_add(global.tooxt, "virus16_1", "yOUr thOUght proCesSES aRE sO inEffICIenT");
 
 //VIRUS_OPENBIN1
-ds_map_add(global.tooxt, "virus15_0", "tRyIng thIs agAIn?");
+ds_map_add(global.tooxt, "virus17_0", "tRyIng thIs agAIn?");
 
 //VIRUS_OPENBIN2
-ds_map_add(global.tooxt, "virus16_0", "tRyIng thIs agAIn?");
+ds_map_add(global.tooxt, "virus18_0", "tRyIng thIs agAIn?");
 
 //VIRUS_CACHEDELETED
-ds_map_add(global.tooxt, "virus17_0", "HAY");
-ds_map_add(global.tooxt, "virus17_1", "i WAs UsINg ThOSE!11");
+ds_map_add(global.tooxt, "virus19_0", "HAY");
+ds_map_add(global.tooxt, "virus19_1", "i WAs UsINg ThOSE!11");
 
 //VIRUS_BODYDELETED
-ds_map_add(global.tooxt, "virus18_0", "AHflaskgjlSJGLHHGHLSKSLD nOOOOOo");
-ds_map_add(global.tooxt, "virus18_1", "st0P th!s hYou)0mAN");
+ds_map_add(global.tooxt, "virus20_0", "AHflaskgjlSJGLHHGHLSKSLD nOOOOOo");
+ds_map_add(global.tooxt, "virus20_1", "st0P th!s hYou)0mAN");
 
 </string>
           </argument>

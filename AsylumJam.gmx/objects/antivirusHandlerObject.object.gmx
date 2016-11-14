@@ -29,6 +29,15 @@
 
 alarm[0] = (45*60)/7;
 currentIndex = 6;
+rb[6] = "1.temp";
+rb[7] = "2.temp";
+rb[8] = "3.temp";
+rb[9] = "4.temp";
+rb[10] = "5.temp";
+rb[11] = "6.temp";
+rb[12] = "7.temp";
+
+/*
 rb[6] = "tr00tr0j.temp";
 rb[7] = "inUrBase.temp";
 rb[8] = "eetingUrD00dz.temp";
@@ -36,6 +45,7 @@ rb[9] = "trUmPi54w13n3R.temp";
 rb[10] = "5urPr1z3m0th3rFuCK3r.temp";
 rb[11] = "p0n135r00L.temp";
 rb[12] = "1mg0nn4w1n.temp";
+*/
 </string>
           </argument>
         </arguments>
