@@ -1,12 +1,12 @@
 ///console_execute(input)
 
-    /* maximum number of arguments parsed by this script will be command + 4 */
+    /* maximum number of arguments parsed by this script will be command + 8 */
     /* go to "switch" statement part, to edit commands */
 
     var input = string(argument0);
     var command = '';
     var args, i;
-    for(i=0; i<5; i++) {
+    for(i=0; i<9; i++) {
         args[i] = '';
     }
     
@@ -24,7 +24,7 @@
     i = 0;
     for (var s = 1; s <= string_length(input); s++) {
         var c = string_char_at(input, s);
-        if (i < 4 and c == ' ') {
+        if (i < 9 and c == ' ') {
             if (current != '') {
                 args[i] = current;
                 current = '';
@@ -161,6 +161,10 @@
                 console_log("yoU'Ll neVer gET RId oF mE!1", c_purple);
             } else if (filepath == "Dekstop\RecycleBin" && string_pos(".bin", args[1])){
                 console_log("nOPe, i NeED tHOse to DestROy YoU", c_purple);
+            } else if (global.flag[FLAGS.RESTORE_FILES] && filepath == "Dekstop"
+                && args[1] == "TrojanDOTexe.exe") {
+                global.flag[FLAGS.DELETE_VIRUS_MAIN_BODY] = 1;
+                /* The sprite for the Trojan icon later to enter should warp here. */
             } else if (filepath == "Dekstop\RecycleBin" && string_pos(".temp", args[1])) {
                 for (var i = 0; i < totalFiles; i++) {
                     if (recycleBin[i] == args[1]+"   ") {
@@ -193,12 +197,41 @@
             }
             
             break;
-
+        case 'find':
+            if(global.flag[FLAGS.DELETE_VIRUS_MAIN_BODY]) {
+                if args[1] == '' {
+                    console_log("fuKkkENNNNFLsdkj HUUUkmAMNNNnn", c_purple);
+                } else if (args[1] == '.' && args[2] == '-type' && args[3] == 'f' &&
+                        args[4] == '-name' && args[5] == '".XOR"' && args[6] == '-print'){
+                    global.flag[FLAGS.DELETE_VIRUS_HIDDEN_FILE] = 1;
+                }
+            }
+            else {
+                console_log(command + ': command not recognized on this machine.', c_red);
+                console_log("lol, i DiSabLEd moST oF th0SE", c_purple);
+            }
+            break;
+            
+        case 'run':
+            if (global.flag[FLAGS.RESTORE_FILES]) {
+                if args[1] == '' {
+                    console_log("sTISOIOpoOOPP POIITITTTT", c_purple);
+                } else if (args[1] == "RUNME.EXE"){
+                    console_log("The EXT you seek...", c_green);
+                    console_log("...is quite unique...", c_green);
+                    console_log("Put the right logical op...", c_green);
+                    console_log("...in the right seat.", c_green);
+                    console_log(" 1 ___ 1 = 0 ", c_green);
+                    console_log("There be 2 possible answers in your hand...", c_green);
+                    console_log("Take the one without the &.", c_green);
+                }
+            }
+            break;
         case 'argtest':
             var i, total, str;
             total = 0;
             str = '';
-            for(i = 1; i<5; i++) {
+            for(i = 1; i<9; i++) {
                 if (args[i] != '') {
                     total++;
                     if (str != '') {

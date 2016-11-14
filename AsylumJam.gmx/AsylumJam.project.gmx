@@ -87,6 +87,7 @@
     </sprites>
     <sprite>sprites\spr_virus</sprite>
     <sprite>sprites\spr_pointer</sprite>
+    <sprite>sprites\mainPageSprite</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\test</background>
@@ -207,6 +208,7 @@
       <script>scripts\scr_restoreFiles.gml</script>
       <script>scripts\scr_deletedMainBody.gml</script>
       <script>scripts\scr_runGameWinSequence.gml</script>
+      <script>scripts\scr_closeAntivirus.gml</script>
     </scripts>
   </scripts>
   <shaders name="shaders">
@@ -277,6 +279,7 @@
     <object>objects\obj_timer</object>
     <object>objects\eventFire</object>
     <object>objects\antivirusHandlerObject</object>
+    <object>objects\splashEffect</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tl_virusIntro</timeline>
@@ -289,6 +292,7 @@
     <room>rooms\rm_demo_glitch</room>
     <room>rooms\rm_credits</room>
     <room>rooms\rm_gameOver</room>
+    <room>rooms\rm_gameWon</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

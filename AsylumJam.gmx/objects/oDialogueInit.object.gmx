@@ -49,7 +49,9 @@ enum SCENE {
     VIRUS_OPENINTERNET1,
     VIRUS_OPENINTERNET2,
     VIRUS_OPENBIN1,
-    VIRUS_OPENBIN2
+    VIRUS_OPENBIN2,
+    VIRUS_CACHEDELETED,
+    VIRUS_BODYDELETED
 }
 
 ///////////////////////////////////////////
@@ -170,6 +172,14 @@ ds_map_add(global.tooxt, "virus15_0", "tRyIng thIs agAIn?");
 
 //VIRUS_OPENBIN2
 ds_map_add(global.tooxt, "virus16_0", "tRyIng thIs agAIn?");
+
+//VIRUS_CACHEDELETED
+ds_map_add(global.tooxt, "virus17_0", "HAY");
+ds_map_add(global.tooxt, "virus17_1", "i WAs UsINg ThOSE!11");
+
+//VIRUS_BODYDELETED
+ds_map_add(global.tooxt, "virus18_0", "AHflaskgjlSJGLHHGHLSKSLD nOOOOOo");
+ds_map_add(global.tooxt, "virus18_1", "st0P th!s hYou)0mAN");
 
 </string>
           </argument>

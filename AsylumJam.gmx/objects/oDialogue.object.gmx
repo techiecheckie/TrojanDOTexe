@@ -36,7 +36,7 @@ padding = 24;           // text padding
 max_width = 280;        // max width of text box
 inside_col = c_white;   // inside color of box
 text_col = c_dkgray;    // text color
-key = ord("Z");         // interaction key
+key = vk_space;         // interaction key
 sp = 0.2;                 // characters per step
 
 //display_reset(8, true); // smooth shapes
