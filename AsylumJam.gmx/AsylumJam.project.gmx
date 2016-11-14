@@ -108,6 +108,8 @@
     <sprite>sprites\spr_virus</sprite>
     <sprite>sprites\spr_pointer</sprite>
     <sprite>sprites\mainPageSprite</sprite>
+    <sprite>sprites\spr_win</sprite>
+    <sprite>sprites\spr_lose</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\test</background>
@@ -286,6 +288,8 @@
         <object>objects\obj_yourfilesmanager</object>
         <object>objects\obj_recyclebinfilesmanager</object>
       </objects>
+      <object>objects\obj_gameOver</object>
+      <object>objects\obj_gameWon</object>
     </objects>
     <object>objects\virus</object>
     <object>objects\obj_startMenu</object>
@@ -308,12 +312,12 @@
   <rooms name="rooms">
     <room>rooms\rm_start</room>
     <room>rooms\rm_splashPage</room>
+    <room>rooms\rm_gameOver</room>
+    <room>rooms\rm_gameWon</room>
     <room>rooms\rm_desktop</room>
     <room>rooms\room_example</room>
     <room>rooms\rm_demo_glitch</room>
     <room>rooms\rm_credits</room>
-    <room>rooms\rm_gameOver</room>
-    <room>rooms\rm_gameWon</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
