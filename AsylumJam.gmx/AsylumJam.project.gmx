@@ -77,6 +77,7 @@
       <sprite>sprites\spr_file</sprite>
       <sprite>sprites\spr_folder</sprite>
       <sprite>sprites\spr_recyclebin</sprite>
+      <sprite>sprites\spr_internet</sprite>
     </sprites>
     <sprites name="glitch">
       <sprite>sprites\spr_glitch1</sprite>
@@ -90,10 +91,16 @@
     <sprites name="internet">
       <sprite>sprites\spr_faboo</sprite>
       <sprite>sprites\spr_internet_large_image</sprite>
-      <sprite>sprites\spr_ad_pony</sprite>
       <sprite>sprites\spr_weather_icon</sprite>
       <sprite>sprites\spr_internet_buttons</sprite>
       <sprite>sprites\spr_download_antivirus</sprite>
+      <sprite>sprites\spr_ad_pony</sprite>
+      <sprite>sprites\spr_ad_trojan</sprite>
+      <sprite>sprites\spr_ad_cloud</sprite>
+      <sprite>sprites\spr_ad_cache</sprite>
+      <sprite>sprites\spr_ad_pony_page</sprite>
+      <sprite>sprites\spr_ad_trojan_page</sprite>
+      <sprite>sprites\spr_ad_cloud_page</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -276,6 +283,7 @@
         <object>objects\obj_cmd</object>
         <object>objects\obj_yourfiles_open</object>
         <object>objects\obj_recycle_open</object>
+        <object>objects\obj_internet_open</object>
       </objects>
       <objects name="filemanager">
         <objects name="parent">
@@ -305,9 +313,9 @@
   </timelines>
   <rooms name="rooms">
     <room>rooms\rm_start</room>
-    <room>rooms\room_example</room>
     <room>rooms\rm_splashPage</room>
     <room>rooms\rm_desktop</room>
+    <room>rooms\room_example</room>
     <room>rooms\rm_demo_glitch</room>
     <room>rooms\rm_credits</room>
   </rooms>

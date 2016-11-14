@@ -14,6 +14,7 @@ state = 0;
 back = -1;
 
 isInteractable = true;
+hasChangedAds = false;
 
 internet_switch_page(0);
 
