@@ -18,4 +18,5 @@ with (dialogbox) {
 }
 
 // Added hidden file.
-global.recycleBin[13] = "RUNME.exe";
+global.recycleBin[global.recycleBinSize] = "RUNME.exe";
+global.recycleBinSize++;

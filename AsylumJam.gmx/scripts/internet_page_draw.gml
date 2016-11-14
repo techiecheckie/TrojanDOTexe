@@ -16,9 +16,13 @@ switch (state) {
         
         draw_sprite_on_scrollpane(spr_weather_icon,0,scrollpaneWidth - 48, 32);
     
-        if (hasChangedAds) {
-            draw_sprite_on_scrollpane(spr_ad_cloud,0,scrollpaneWidth/2-250, 160);
+        if (hasChangedAds == 1) {
+            draw_sprite_on_scrollpane(spr_ad_pony,0,scrollpaneWidth/2-250, 160);
             draw_sprite_on_scrollpane(spr_ad_cache,0,scrollpaneWidth/2+250, 160);
+        }
+        else if (hasChangedAds == 2) {
+            draw_sprite_on_scrollpane(spr_ad_cloud,0,scrollpaneWidth/2-250, 160);
+            draw_sprite_on_scrollpane(spr_ad_trojan,0,scrollpaneWidth/2+250, 160);
         }
         else {
         draw_sprite_on_scrollpane(spr_ad_pony,0,scrollpaneWidth/2-250, 160);
@@ -50,8 +54,17 @@ switch (state) {
                 
                 if (mouse_check_button_pressed(mb_left)) {
                     // TODO: incorporate the flags
-                    if (hasChangedAds) {
-                        internet_switch_page(4);
+                    if (hasChangedAds == 1) {
+                        internet_switch_page(2);
+                    }
+                    else if (hasChangedAds == 2) {
+                        var d = instance_create(room_width/2 - 320, room_height/2 - 240, obj_dialogbox);
+                        d.depth = -1;
+                        with (d) {
+                            dialogbox_set_text("Reformat computer?");
+                            dialogbox_add_button("Yes", restore_files_button);
+                            dialogbox_add_button("No", cancel_internet_dialog);
+                        }
                     }
                     else {
                         internet_switch_page(2);
@@ -76,14 +89,14 @@ switch (state) {
                 
                 if (mouse_check_button_pressed(mb_left)) {
                     // TODO: incorporate the flags
-                    if (hasChangedAds){
+                    if (hasChangedAds == 1){
                         var d = instance_create(room_width/2 - 320, room_height/2 - 240, obj_dialogbox);
                         d.depth = -1;
                         with (d) {
-                            dialogbox_set_text("Clear your internet cache?");
-                            dialogbox_add_button("Yes", -1);
-                            dialogbox_add_button("No", cancel_internet_dialog);
+                            dialogbox_set_text("Internet Cache cleared.");
+                            dialogbox_add_button("Okay", cancel_internet_dialog);
                         }
+                        global.flag[FLAGS.DELETE_CACHE] = 1;
                     }else{
                         internet_switch_page(3);
                     }

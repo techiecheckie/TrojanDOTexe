@@ -233,6 +233,7 @@
         <scripts name="button_scripts">
           <script>scripts\cancel_internet_dialog.gml</script>
           <script>scripts\download_antivirus_button.gml</script>
+          <script>scripts\restore_files_button.gml</script>
         </scripts>
       </scripts>
       <scripts name="scrollpane">
@@ -353,6 +354,9 @@
     <object>objects\antivirusHandlerObject</object>
     <object>objects\splashEffect</object>
     <object>objects\obj_sound</object>
+    <objects name="narrative">
+      <object>objects\obj_reformat</object>
+    </objects>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tl_virusIntro</timeline>

@@ -58,6 +58,13 @@ if mouse_check_doubleclick(mb_left, 250000)
         instance_create(48, 48, obj_internet_browser);
         
         // TODO: figure out if we need to change the ads
+        if (global.flag[FLAGS.RUN_ANTIVIRUS]) {
+            obj_internet_browser.hasChangedAds = 1;
+        }
+        
+        if (global.flag[FLAGS.DELETED_FILE_AND_CACHE]) {
+            obj_internet_browser.hasChangedAds = 2;
+        }
     }
 }
 //keyboard_key_release(192);

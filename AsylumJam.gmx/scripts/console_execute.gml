@@ -155,16 +155,17 @@
             if (args[1] == '') {
                 console_log("rm command requires arguments", c_red);
                 console_log("cLUuUuUuUUUUUULeSS", c_purple);
-            } else if (filepath == "Dekstop" && args[1] != "TrojanDOTexe.exe"){
+            } else if (global.flag[FLAGS.RESTORE_FILES] && filepath == "Dekstop"
+                && args[1] == "TrojanDOTexe.exe") {
+                global.flag[FLAGS.DELETE_VIRUS_MAIN_BODY] = 1;
+                /* The sprite for the Trojan icon later to enter should warp here. */
+            }
+            else if (filepath == "Dekstop" && args[1] != "TrojanDOTexe.exe"){
                 console_log("sRy reMoVED thAT fuNCtion in THis FoLDer", c_purple);
             } else if (filepath == "Dekstop" && args[1] == "TrojanDOTexe.exe") {
                 console_log("yoU'Ll neVer gET RId oF mE!1", c_purple);
             } else if (filepath == "Dekstop\RecycleBin" && string_pos(".bin", args[1])){
                 console_log("nOPe, i NeED tHOse to DestROy YoU", c_purple);
-            } else if (global.flag[FLAGS.RESTORE_FILES] && filepath == "Dekstop"
-                && args[1] == "TrojanDOTexe.exe") {
-                global.flag[FLAGS.DELETE_VIRUS_MAIN_BODY] = 1;
-                /* The sprite for the Trojan icon later to enter should warp here. */
             } else if (filepath == "Dekstop\RecycleBin" && string_pos(".temp", args[1])) {
                 for (var i = 0; i < global.recycleBinSize; i++) {
                     if (global.recycleBin[i] == args[1]) {
@@ -181,7 +182,7 @@
                             }
                         }
                         global.tempFilesDeleted++;
-                        if (global.tempFilesDeleted == 1) {
+                        if (global.tempFilesDeleted >= 1) {
                             global.flag[FLAGS.DELETE_1_FILE] = 1;
                         }
                         if (global.tempFilesDeleted >= 7) {
